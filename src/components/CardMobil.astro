@@ -1,0 +1,43 @@
+---
+
+---
+
+<div class="nyheder">
+  <div class="kort1">
+    <img src="/public/kopper_mobil.jpg" alt="kopper på et bord" />
+    <p>Nye kopper</p>
+  </div>
+  <div class="kort1">
+    <img src="/public/kopper_mobil.jpg" alt="kopper på et bord" />
+    <p>Nye kopper</p>
+  </div>
+  <div class="kort1">
+    <img src="/public/kopper_mobil.jpg" alt="kopper på et bord" />
+    <p>Nye kopper</p>
+  </div>
+  <div class="kort1">
+    <img src="/public/kopper_mobil.jpg" alt="kopper på et bord" />
+    <p>Nye kopper</p>
+  </div>
+</div>
+
+<style>
+  .nyheder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    padding: 10%;
+    gap: 10%;
+  }
+
+  .kort1 {
+    background-color: var(--accent-color);
+    padding-bottom: 15%;
+    border-radius: 20%;
+  }
+  p {
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+  }
+</style>

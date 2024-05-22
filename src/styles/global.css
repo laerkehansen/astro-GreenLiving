@@ -1,0 +1,62 @@
+/**********GLobale Styles********/
+:root {
+  --primary-color: rgba(255, 249, 244, 1);
+  --secondary-color: rgba(152, 199, 160, 1);
+  --accent-color: rgba(4, 92, 69, 1);
+  --header-color: rgba(245, 238, 232, 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: montserrat;
+  text-align: center;
+}
+
+ul li {
+  display: flex;
+}
+
+/**********/
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+footer {
+  background-color: var(--accent-color);
+  text-align: center;
+  color: var(--primary-color);
+  margin-top: 20%;
+  margin-bottom: 15%;
+}
+
+@media (max-width: 600px) {
+  header {
+    background-color: var(--header-color);
+  }
+  .illu_mobil {
+    display: grid;
+    margin: auto;
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+
+  .footer_mobil {
+    display: grid;
+    gap: 15%;
+  }
+}
+
+@media (min-width: 600px) {
+  .illu_mobil {
+    display: none;
+  }
+}

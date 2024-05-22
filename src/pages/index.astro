@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+import CardMobil from "../components/CardMobil.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Forside</title>
+    <link rel="stylesheet" href="https://use.typekit.net/onu0qzz.css" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li>Produkter</li>
+        <li>Om os</li>
+        <li>Din kurv</li>
+      </ul>
+    </header>
+    <main>
+      <img
+        class="illu_mobil"
+        src="/public/Illu_mobil.svg"
+        alt="illustration af butikken"
+      />
+      <h1>Nyheder</h1>
+      <CardMobil />
+      <img src="/public/squrriel_mobil.svg" alt="" />
+    </main>
+    <footer>
+      <div class="footer_mobil">
+        <div>
+          <h4>Se mere her:</h4>
+          <ul>
+            <li>Klimaværkstedet</li>
+            <li>Trustpilot</li>
+            <li>Handelsbetingelser</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontakt os her:</h4>
+          <ul>
+            <li>Adresse: Nørrebrogade 61, 2200</li>
+            <li>Telefon: 61765170</li>
+            <li>Email: kontakt@greenliving.dk</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Vores åbningstider:</h4>
+          <ul>
+            <li>Mandag - Fredag: 10.00-17.00</li>
+            <li>Lørdag: 10.00-16.00</li>
+            <li>Søndag: Lukket</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
