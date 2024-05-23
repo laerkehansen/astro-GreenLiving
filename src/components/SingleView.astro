@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<h1>Titel</h1>
+<h2>Pris</h2>
+<div class="single_view">
+  <div><img src="/stort_billede.jpg" alt="billede af plakat" /></div>
+  <div class="valgmuligheder">
+    <div>
+      <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
+    </div>
+    <div>
+      <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
+    </div>
+    <div>
+      <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
+    </div>
+  </div>
+</div>
+<div class="knapper">
+  <div><button>- 1 +</button></div>
+  <div><button>Læg i kurv</button></div>
+</div>
+
+<p>
+  Disse utrolig flotte kort er illustreret af den lokale kunstner Rikke Jensen
+  Med sin farverige og kunstneriske stil formår Rikke at give liv til sine
+  montager og fremhæve sjælen i hver byområde. Kortet er perfekt som til og fra
+  kort, som efterfølgende kan dekorere i hjemmet. <br />
+  Nørrebro kortene kommer 6 forskellige designes. <br />
+  Kortet måler A5 : 14,8 x 21 cm. <br />
+  Konvolut medfølger.
+</p>
+
+<style>
+  .single_view {
+    display: grid;
+    justify-content: center;
+    gap: 5%;
+  }
+
+  .knapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9%;
+  }
+  .valgmuligheder {
+    display: flex;
+    gap: 9%;
+  }
+
+  button {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-color: rgba(255, 156, 84, 1);
+    border-radius: 25%;
+    padding: 2%;
+  }
+
+  h1,
+  h2 {
+    text-align: start;
+    padding-left: 10%;
+  }
+
+  p {
+    text-align: justify;
+    white-space: pre-line;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+</style>
