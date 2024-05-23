@@ -2,7 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import Produktkort from "../components/Produktkort.astro";
+
+const data = await fetch(
+  "https://vlprteqptglrilewaeps.supabase.co/rest/v1/GreenLiving",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZscHJ0ZXFwdGdscmlsZXdhZXBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYyMDcwOTAsImV4cCI6MjAzMTc4MzA5MH0.dhbb7ywF0JhPSlviFneY6CRDSPjtANKWEh_MWyKUgog",
+    },
+  }
+).then((res) => res.json());
+
 ---
+        
 
 <Layout>
   <Produktkort />

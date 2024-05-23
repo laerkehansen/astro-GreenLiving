@@ -5,9 +5,20 @@
 <div class="off-screen-menu">
   <nav>
     <ul>
-      <li>Produkter</li>
-      <li>Om os</li>
-      <li>Din kurv</li>
+      <li>
+        <a href="">Keramik</a>
+        <ul class="dropdown">
+          <li><a href="">Kopper</a></li>
+          <li><a href="">Tallerkener</a></li>
+          <li><a href="">Skåle</a></li>
+          <li><a href="">Andet</a></li>
+        </ul>
+      </li>
+      <li><a href="">Plakater</a></li>
+      <li><a href="">Smukker</a></li>
+      <li><a href="">Mad/Pleje</a></li>
+      <li><a href="">Interiør</a></li>
+      <li><a href="">Om os</a></li>
     </ul>
   </nav>
 </div>
@@ -86,6 +97,13 @@
   .burger_menu .active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .dropdown li {
+    opacity: 0;
+  }
+  .dropdown.active {
+    color: black;
   }
 </style>
 

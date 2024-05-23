@@ -4,6 +4,19 @@ import CardMobil from "../components/CardMobil.astro";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Produktkort from "../components/Produktkort.astro";
+
+const data = await fetch(
+  "https://vlprteqptglrilewaeps.supabase.co/rest/v1/GreenLiving",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZscHJ0ZXFwdGdscmlsZXdhZXBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYyMDcwOTAsImV4cCI6MjAzMTc4MzA5MH0.dhbb7ywF0JhPSlviFneY6CRDSPjtANKWEh_MWyKUgog",
+    },
+  }
+).then((res) => res.json());
+
 ---
 
 <html lang="en">
@@ -19,33 +32,43 @@ import Footer from "../components/Footer.astro";
     <Layout>
       <img
         class="illu_mobil"
-        src="/public/Illu_mobil.svg"
+        src="/Illu_mobil.svg"
         alt="illustration af butikken"
       />
       <h1>Nyheder</h1>
-      <CardMobil />
+      <section>
+        {
+          data.map((produkt) => {
+            return <Produktkort data={produkt}/>;
+          })
+        }
+      </section>
+
       <div class="inspiration">
         <h3>Få inspiration her</h3>
         <a href="">Læs mere</a>
       </div>
-      <img src="/public/squrriel_mobil.svg" alt="illustration af bord med keramik" />
-    <Layout/>
+      <img
+        src="/squrriel_mobil.svg"
+        alt="illustration af bord med keramik"
+      />
+      <Layout />
+    </Layout>
   </body>
+
+  <style>
+    .inspiration {
+      display: grid;
+      justify-content: end;
+      translate: -40px 100px;
+    }
+
+    div a {
+      border-radius: 35%;
+      color: var(--primary-color);
+      background-color: rgba(255, 156, 84, 1);
+      padding: 5%;
+      text-decoration: none;
+    }
+  </style>
 </html>
-
-<style>
-  .inspiration {
-    display: grid;
-    justify-content: end;
-    translate: -40px 100px;
-  }
-
-  div a {
-    border-radius: 35%;
-    color: var(--primary-color);
-    background-color: rgba(255, 156, 84, 1);
-    padding: 5%;
-    text-decoration: none;
-  }
-
-</style>
