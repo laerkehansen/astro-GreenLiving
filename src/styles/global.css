@@ -39,7 +39,7 @@ footer {
   padding-bottom: 25%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 393px) {
   header {
     background-color: var(--header-color);
   }
@@ -56,7 +56,7 @@ footer {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 393px) {
   .illu_mobil {
     display: none;
   }

@@ -1,0 +1,101 @@
+---
+
+---
+
+<div class="off-screen-menu">
+  <nav>
+    <ul>
+      <li>Produkter</li>
+      <li>Om os</li>
+      <li>Din kurv</li>
+    </ul>
+  </nav>
+</div>
+
+<nav>
+  <div class="burger_menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<style>
+  .off-screen-menu {
+    background-color: var(--header-color);
+    height: 100vh;
+    width: 100%;
+    max-width: 600px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    right: -600px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: montserrat;
+    transition: 0.3s ease;
+    z-index: 98;
+  }
+
+  .off-screen-menu.active {
+    right: 0;
+  }
+
+  nav {
+    padding: 1rem;
+    display: flex;
+    background-color: var(--header-color);
+  }
+
+  .burger_menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+  }
+
+  .burger_menu span {
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+    z-index: 99;
+  }
+
+  .burger_menu span:nth-child(1) {
+    top: 25%;
+  }
+  .burger_menu span:nth-child(3) {
+    top: 75%;
+  }
+
+  .burger_menu .active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .burger_menu .active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger_menu .active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+</style>
+
+<script>
+  const burgerMenu = document.querySelector(".burger_menu");
+
+  const offScreenMenu = document.querySelector(".off-screen-menu");
+
+  burgerMenu.addEventListener("click", () => {
+    burgerMenu.classList.toggle("active");
+    offScreenMenu.classList.toggle("active");
+  });
+</script>
