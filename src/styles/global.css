@@ -11,6 +11,7 @@ h2,
 h3,
 h4,
 p,
+a, 
 li {
   font-family: montserrat;
   text-align: center;
@@ -34,8 +35,8 @@ footer {
   background-color: var(--accent-color);
   text-align: center;
   color: var(--primary-color);
-  margin-top: 20%;
-  margin-bottom: 15%;
+  padding-top: 10%;
+  padding-bottom: 25%;
 }
 
 @media (max-width: 600px) {
