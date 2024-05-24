@@ -1,26 +1,28 @@
 ---
 const { data } = Astro.props;
-console.log(data)
+console.log(data);
+import "../styles/global.css";
 ---
+
 <a href={`produkter/${data.Slug}`}>
-<div class="kort_til_produkt">
-  <div>
-    <div class="billede_kort">
-      <img src="/stort_billede.jpg" alt="billede af plakat" />
+  <div class="kort_til_produkt">
+    <div>
+      <div class="billede_kort">
+        <img src="/stort_billede.jpg" alt="billede af plakat" />
+      </div>
+      <div class="beskrivelse_kort">
+        <h2>{data.Navn}</h2>
+        <h3>{data.pris}</h3>
+      </div>
     </div>
-    <div class="beskrivelse_kort">
-      <h2>{data.Navn}</h2>
-      <h3>{data.pris}</h3>
+    <div>
+      <a href="/single-view">Læs mere</a>
     </div>
   </div>
-  <div>
-    <a href="/single-view">Læs mere</a>
-  </div>
-</div>
 </a>
 
 <style>
-  h1{
+  h1 {
     text-align: center;
     padding-top: 10%;
   }

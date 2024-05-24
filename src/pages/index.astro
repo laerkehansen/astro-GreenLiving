@@ -16,7 +16,6 @@ const data = await fetch(
     },
   }
 ).then((res) => res.json());
-
 ---
 
 <html lang="en">
@@ -39,7 +38,7 @@ const data = await fetch(
       <section>
         {
           data.map((produkt) => {
-            return <Produktkort data={produkt}/>;
+            return <Produktkort data={produkt} />;
           })
         }
       </section>
@@ -48,27 +47,23 @@ const data = await fetch(
         <h3>Få inspiration her</h3>
         <a href="">Læs mere</a>
       </div>
-      <img
-        src="/squrriel_mobil.svg"
-        alt="illustration af bord med keramik"
-      />
-      <Layout />
+      <img src="/squrriel_mobil.svg" alt="illustration af bord med keramik" />
     </Layout>
+
+    <style>
+      .inspiration {
+        display: grid;
+        justify-content: end;
+        translate: -40px 100px;
+      }
+
+      div a {
+        border-radius: 35%;
+        color: var(--primary-color);
+        background-color: rgba(255, 156, 84, 1);
+        padding: 5%;
+        text-decoration: none;
+      }
+    </style>
   </body>
-
-  <style>
-    .inspiration {
-      display: grid;
-      justify-content: end;
-      translate: -40px 100px;
-    }
-
-    div a {
-      border-radius: 35%;
-      color: var(--primary-color);
-      background-color: rgba(255, 156, 84, 1);
-      padding: 5%;
-      text-decoration: none;
-    }
-  </style>
 </html>

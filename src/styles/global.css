@@ -4,6 +4,9 @@
   --secondary-color: rgba(152, 199, 160, 1);
   --accent-color: rgba(4, 92, 69, 1);
   --header-color: rgba(245, 238, 232, 1);
+  --boks-color: rgba(239, 194, 127, 1);
+  --button-color: rgba(255, 156, 84, 1);
+  --kontakt-color: rgba(240, 231, 224, 1);
 }
 
 h1,
@@ -11,7 +14,7 @@ h2,
 h3,
 h4,
 p,
-a, 
+a,
 li {
   font-family: montserrat;
   text-align: center;
