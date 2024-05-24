@@ -99,12 +99,42 @@
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
-  .dropdown li {
-    opacity: 0;
+  ul{
+    list-style: none;
+    background-color: var(--header-color);
   }
-  .dropdown.active {
-    color: black;
+
+  ul li{
+    position: relative;
+    display:block;
+
   }
+
+  ul li a{
+    display: block;
+    text-decoration: none;
+  }
+
+  ul li ul.dropdown li{
+    display: block;
+  }
+ul li ul.dropdown{
+  width: 100%;
+  background-color: var(--header-color);
+  position: absolute;
+  z-index: 98;
+  display: none;
+}
+
+ul li a:hover{
+  background-color: var(--primary-color);
+  padding: 5%;
+  width: 100%;
+}
+
+ul li:hover ul.dropdown{
+  display: block;
+}
 </style>
 
 <script>
