@@ -1,149 +1,218 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
 <!doctype html>
 <html lang="da">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vores Værdier</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Forside</title>
+    <link rel="stylesheet" href="https://use.typekit.net/onu0qzz.css" />
   </head>
+  <Header />
   <body>
-    <div class="container">
-      <h1>VORES VÆRDIER</h1>
-      <div class="content">
-        <div class="box">
-          <h2>Hvorfor vælge bæredygtighed tænker I?</h2>
-          <p>
-            Vi lægger utrolig høj vægt på kvalitet og de forhold vores produkter
-            fremstilles under. Alle vores varer er nøje udvalgt og inspiceret.
-            Vores snedker, væver og leverandører er primært fra Asien, hvor gode
-            råmaterialer og godt håndværk er til at finde, i henhold til de
-            rammer og krav for bæredygtighed vi har sat.
-          </p>
-          <button>MEGA ENIG!</button>
+    <main>
+      <div class="illu_mobil2">
+        <h1>OM GREEN LIVING OG HVAD VI STÅR FOR</h1>
+        <img src="/public/Illu_mobil.svg" alt="butik" />
+      </div>
+
+      <div class="container">
+        <h2 class="font2">VORES VÆRDIER</h2>
+        <div class="content">
+          <div class="box">
+            <h2>Hvorfor vælge bæredygtighed tænker I?</h2>
+            <p>
+              Vi lægger utrolig høj vægt på kvalitet og de forhold vores
+              produkter fremstilles under. Alle vores varer er nøje udvalgt og
+              inspiceret. Vores snedker, væver og leverandører er primært fra
+              Asien, hvor gode råmaterialer og godt håndværk er til at finde, i
+              henhold til de rammer og krav for bæredygtighed vi har sat.
+            </p>
+            <button>MEGA ENIG!</button>
+          </div>
+          <div class="box">
+            <h2>Vidste du at?</h2>
+            <p>
+              Vi har de sidste 5 år støttet lokale og internationale
+              social-økonomiske projekter. Lige fra flygtninge kvinder i
+              Fredericia til mødre i udkanten af Ghana. Vi sørger nemlig altid
+              for at betale dem ordentligt. Det gør vi ved, at selv give dem
+              pengene i hånden. Så vi er sikre på at det er en fair trade.
+            </p>
+            <button>HVOR SEJT!</button>
+          </div>
+          <div class="box">
+            <h2>Hvorfor vælge bæredygtighed tænker I?</h2>
+            <p>
+              Vi lægger utrolig høj vægt på kvalitet og de forhold vores
+              produkter fremstilles under. Alle vores varer er nøje udvalgt og
+              inspiceret. Vores snedker, væver og leverandører er primært fra
+              Asien, hvor gode råmaterialer og godt håndværk er til at finde, i
+              henhold til de rammer og krav for bæredygtighed vi har sat.
+            </p>
+            <button>GOD TANKE!</button>
+          </div>
         </div>
-        <div class="box">
-          <h2>Vidste du at?</h2>
-          <p>
-            Vi har de sidste 5 år støttet lokale og internationale
-            social-økonomiske projekter. Lige fra flygtninge kvinder i
-            Fredericia til mødre i udkanten af Ghana. Vi sørger nemlig altid for
-            at betale dem ordentligt. Det gør vi ved, at selv give dem pengene i
-            hånden. Så vi er sikre på at det er en fair trade.
-          </p>
-          <button>HVOR SEJT!</button>
+      </div>
+      <div class="Kontakt">
+        <ul>
+          <li><h3>KONTAKT OS</h3></li>
+          <li>Adresse: Nørrebrogade 61, 2200</li>
+          <li>Telefon: 61765170</li>
+          <li>Email: kontakt@greenliving.dk</li>
+        </ul>
+        <br />
+        <ul>
+          <li><h3>Vores åbningstider</h3></li>
+          <li>Mandag-Fredag: 10.00-17.00</li>
+          <li>Lørdag: 10.00-16.00</li>
+          <li>Søndag: Lukket</li>
+        </ul>
+      </div>
+      <div class="Instasection">
+        <h3>FØLG OS PÅ INSTAGRAM</h3>
+        <div class="grid_1-2">
+          <img class="Insta" src="/public/Images/SmaBilleder1.avif" alt="" />
+          <div>
+            <img class="Insta" src="/public/Images/SmaBilleder4.avif" alt="" />
+            <img class="Insta" src="/public/Images/SmaBilleder.avif" alt="" />
+          </div>
         </div>
-        <div class="box">
-          <h2>Hvorfor vælge bæredygtighed tænker I?</h2>
-          <p>
-            Vi lægger utrolig høj vægt på kvalitet og de forhold vores produkter
-            fremstilles under. Alle vores varer er nøje udvalgt og inspiceret.
-            Vores snedker, væver og leverandører er primært fra Asien, hvor gode
-            råmaterialer og godt håndværk er til at finde, i henhold til de
-            rammer og krav for bæredygtighed vi har sat.
-          </p>
-          <button>GOD TANKE!</button>
+        <div class="grid_1-2">
+          <div>
+            <img class="Insta" src="/public/Images/SmaBilleder4.avif" alt="" />
+            <img class="Insta" src="/public/Images/SmaBilleder.avif" alt="" />
+          </div>
+          <img class="Insta" src="/public/Images/SmaBilleder1.avif" alt="" />
+        </div>
+        <div class="grid_1-2">
+          <img class="Insta" src="/public/Images/SmaBilleder1.avif" alt="" />
+          <div>
+            <img class="Insta" src="/public/Images/SmaBilleder4.avif" alt="" />
+            <img class="Insta" src="/public/Images/SmaBilleder.avif" alt="" />
+          </div>
         </div>
       </div>
-    </div>
-    <h3>FØLG OS PÅ INSTAGRAM</h3>
-    <div class="grid_1-2">
-      <img class="Insta" src="/public/Images/SmaBilleder1.avif" alt="" />
-      <div>
-        <img class="Insta" src="/public/Images/SmaBilleder4.avif" alt="" />
-        <img class="Insta" src="/public/Images/SmaBilleder.avif" alt="" />
-      </div>
-    </div>
-    <div class="grid_1-2">
-      <div>
-        <img class="Insta" src="/public/Images/SmaBilleder4.avif" alt="" />
-        <img class="Insta" src="/public/Images/SmaBilleder.avif" alt="" />
-      </div>
-      <img class="Insta" src="/public/Images/SmaBilleder1.avif" alt="" />
-    </div>
-    <div class="grid_1-2">
-      <img class="Insta" src="/public/Images/SmaBilleder1.avif" alt="" />
-      <div>
-        <img class="Insta" src="/public/Images/SmaBilleder4.avif" alt="" />
-        <img class="Insta" src="/public/Images/SmaBilleder.avif" alt="" />
-      </div>
-    </div>
+    </main>
+    <Footer />
+
+    <style>
+      body {
+        background-color: rgba(255, 249, 244, 1);
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(4, 92, 69, 1);
+      }
+
+      h1 {
+        color: rgba(11, 11, 11, 1);
+        margin-bottom: 40px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .box {
+        background-color: rgba(239, 194, 127, 1);
+        color: rgba(240, 231, 224, 1);
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: rgba(11, 11, 11, 1);
+      }
+
+      .font2 {
+        color: rgba(240, 231, 224, 1);
+        margin-bottom: 40px;
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 1em;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        color: rgba(11, 11, 11, 1);
+      }
+
+      button {
+        background-color: rgba(255, 156, 84, 1);
+        color: rgba(240, 231, 224, 1);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #ff8c00;
+      }
+
+      .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .grid_1-2 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 5px;
+      }
+
+      .Kontakt {
+        background-color: rgba(240, 231, 224, 1);
+        color: rgba(11, 11, 11, 1);
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .baggrundsfarve {
+        background-color: var(--primary-color);
+      }
+
+      .Insta {
+        padding: 5px;
+      }
+
+      .Instasection {
+        padding-top: 30px;
+      }
+
+      .illu_mobil2 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 30px;
+        padding-top: 40px;
+      }
+    </style>
   </body>
+
+
 </html>
-
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #335141;
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-
-  .container {
-    text-align: center;
-    padding: 20px;
-  }
-
-  h1 {
-    color: #ffa500;
-    margin-bottom: 40px;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .box {
-    background-color: #ffe8cc;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 1em;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-
-  button {
-    background-color: #ffa500;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  button:hover {
-    background-color: #ff8c00;
-  }
-
-  <style > .grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .grid_1-2 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 5px;
-  }
-
-  .Insta {
-    padding: 5px;
-  }
-</style>
