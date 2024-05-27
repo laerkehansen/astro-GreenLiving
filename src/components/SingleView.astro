@@ -3,37 +3,38 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 ---
 
-<h1>Titel</h1>
-<h2>Pris</h2>
-<div class="single_view">
-  <div><img src="/stort_billede.jpg" alt="billede af plakat" /></div>
-  <div class="valgmuligheder">
-    <div>
-      <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
-    </div>
-    <div>
-      <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
-    </div>
-    <div>
-      <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
+<Layout>
+  <h1>Titel</h1>
+  <h2>Pris</h2>
+  <div class="single_view">
+    <div><img src="/stort_billede.jpg" alt="billede af plakat" /></div>
+    <div class="valgmuligheder">
+      <div>
+        <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
+      </div>
+      <div>
+        <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
+      </div>
+      <div>
+        <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
+      </div>
     </div>
   </div>
-</div>
-<div class="knapper">
-  <div><button>- 1 +</button></div>
-  <div><button>Læg i kurv</button></div>
-</div>
+  <div class="knapper">
+    <div><button>- 1 +</button></div>
+    <div><button>Læg i kurv</button></div>
+  </div>
 
-<p>
-  Disse utrolig flotte kort er illustreret af den lokale kunstner Rikke Jensen
-  Med sin farverige og kunstneriske stil formår Rikke at give liv til sine
-  montager og fremhæve sjælen i hver byområde. Kortet er perfekt som til og fra
-  kort, som efterfølgende kan dekorere i hjemmet. <br />
-  Nørrebro kortene kommer 6 forskellige designes. <br />
-  Kortet måler A5 : 14,8 x 21 cm. <br />
-  Konvolut medfølger.
-</p>
-
+  <p>
+    Disse utrolig flotte kort er illustreret af den lokale kunstner Rikke Jensen
+    Med sin farverige og kunstneriske stil formår Rikke at give liv til sine
+    montager og fremhæve sjælen i hver byområde. Kortet er perfekt som til og
+    fra kort, som efterfølgende kan dekorere i hjemmet. <br />
+    Nørrebro kortene kommer 6 forskellige designes. <br />
+    Kortet måler A5 : 14,8 x 21 cm. <br />
+    Konvolut medfølger.
+  </p>
+</Layout>
 <style>
   .single_view {
     display: grid;

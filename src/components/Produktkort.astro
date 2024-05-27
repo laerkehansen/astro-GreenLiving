@@ -4,11 +4,11 @@ console.log(data);
 import "../styles/global.css";
 ---
 
-<a href={`produkter/${data.Slug}`}>
+<a href={"produkter/" + data.Slug}>
   <div class="kort_til_produkt">
     <div>
       <div class="billede_kort">
-        <img src="/stort_billede.jpg" alt="billede af plakat" />
+        <img src={data.Billede_mobil} alt="billede af produkt" />
       </div>
       <div class="beskrivelse_kort">
         <h2>{data.Navn}</h2>

@@ -25,6 +25,10 @@ ul li {
   display: flex;
 }
 
+img {
+  max-width: 100%;
+}
+
 /**********/
 
 * {
@@ -62,6 +66,10 @@ footer {
 
 @media (min-width: 393px) {
   .illu_mobil {
+    display: none;
+  }
+
+  .wrapper {
     display: none;
   }
 }
