@@ -40,90 +40,98 @@ import "../styles/global.css";
   </div>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    .container {
-      padding-top: 5%;
-      margin: auto;
-      background-color: var(--accent-color);
-      padding-bottom: 10%;
+    @media (max-width:392px){
+        .footer{
+            display:none;
+        }
     }
+    @media (min-width: 393px); {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .row {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      margin: auto;
-      justify-items: center;
-    }
-    ul {
-      list-style: none;
-    }
-    footer {
-      background-color: var(--header-color);
-      padding-top: 5%;
-    }
+      .container {
+        padding-top: 5%;
+        margin: auto;
+        background-color: var(--accent-color);
+        padding-bottom: 10%;
+      }
 
-    .footer-col {
-      padding: 0 15px;
-      display: grid;
-      justify-items: start;
-    }
+      .row {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        margin: auto;
+        justify-items: center;
+      }
+      ul {
+        list-style: none;
+      }
+      footer {
+        background-color: var(--header-color);
+        padding-top: 5%;
+      }
 
-    .footer-col h4 {
-      font-size: 18px;
-      margin-bottom: 30px;
-      font-weight: 800;
-      position: relative;
-    }
+      .footer-col {
+        padding: 0 15px;
+        display: grid;
+        justify-items: start;
+      }
 
-    .footer-col h4::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -10px;
-      height: 2px;
-      box-sizing: border-box;
-      width: 50px;
-    }
+      .footer-col h4 {
+        font-size: 18px;
+        margin-bottom: 30px;
+        font-weight: 800;
+        position: relative;
+      }
 
-    .footer-col ul li:not(:last-child) {
-      margin-bottom: 10px;
-    }
+      .footer-col h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
 
-    .footer-col ul li a {
-      font-size: 16px;
-      text-decoration: none;
-      font-weight: 400;
-      display: block;
-      color: var(--primary-color);
-    }
+      .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+      }
 
-    .footer-col ul li a:hover {
-      color: rgba(239, 194, 127);
-      padding-left: 8px;
-    }
+      .footer-col ul li a {
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 400;
+        display: block;
+        color: var(--primary-color);
+      }
 
-    .trustpilot {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 3%;
-      justify-items: center;
-      padding: 5%;
-      background-color: var(--header-color);
-    }
-    .trustpilot img {
-      border-radius: 10px;
-    }
+      .footer-col ul li a:hover {
+        color: rgba(239, 194, 127);
+        padding-left: 8px;
+      }
 
-    .overskrift {
-      text-align: start;
-      margin-left: 6%;
-      color: var(--text-color);
-      font-size: 30px;
+      .trustpilot {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3%;
+        justify-items: center;
+        padding: 5%;
+        background-color: var(--header-color);
+      }
+      .trustpilot img {
+        border-radius: 10px;
+      }
+
+      .overskrift {
+        text-align: start;
+        margin-left: 6%;
+        color: var(--text-color);
+        font-size: 30px;
+      }
     }
   </style>
 </footer>
