@@ -35,6 +35,10 @@ console.log(myData);
     <div class="info">
       <h1>{myData.Navn}</h1>
       <h2>{myData.Pris}</h2>
+      <div>
+        <a href="">- 1 +</a>
+        <a href="">Læg i kurv</a>
+      </div>
       <div class="valgmuligheder">
         <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
         <img src="/lille_billede.jpg" alt="lille billede af ovenstående" />
@@ -50,14 +54,21 @@ console.log(myData);
   </article>
 
   <style>
+    a {
+      background-color: var(--button-color);
+      border-radius: 15px;
+      padding: 10px;
+      color: var(--primary-color);
+      text-decoration: none;
+      margin-right: 10px;
+    }
     @media (max-width: 393px) {
       .billede_desk {
         display: none;
       }
     }
     @media (min-width: 394px) {
-
-      article{
+      article {
         margin: 7%;
       }
       .grid_1-1 {
@@ -71,7 +82,6 @@ console.log(myData);
       p {
         text-align: start;
         align-items: start;
-        
       }
 
       .billede_mobil {
@@ -87,7 +97,7 @@ console.log(myData);
         padding: 0;
       }
 
-      h1{
+      h1 {
         font-size: var(--h2-size);
       }
 
