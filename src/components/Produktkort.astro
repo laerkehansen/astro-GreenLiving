@@ -9,14 +9,13 @@ import "../styles/global.css";
     <div>
       <div class="billede_kort">
         <img src={data.Billede_mobil} alt="billede af produkt" />
+        <img src={data.Billede_desk} alt="billede af produkt" />
       </div>
       <div class="beskrivelse_kort">
         <h2>{data.Navn}</h2>
-        <h3>{data.pris}</h3>
+        <h3>{data.Pris}</h3>
+        <p>{data.Beskrivelse}</p>
       </div>
-    </div>
-    <div>
-      <a href="/single-view">Læs mere</a>
     </div>
   </div>
 </a>
