@@ -27,6 +27,7 @@ import Deskfooter from "../components/Deskfooter.astro";
           <span style="color: var(--button-color);">VI</span> STÅR FOR
         </h1>
         <img class="illu_desk" src="/Illu_desk.svg" alt="butik" />
+        <img class="illu_mobil1" src="/Illu_mobil.svg" alt="butik" />
       </div>
 
       <div class="container">
@@ -104,7 +105,7 @@ import Deskfooter from "../components/Deskfooter.astro";
             <img class="Insta" src="/Images/SmaBilleder.avif" alt="" />
           </div>
         </div>
-        <div class="grid_2-1">
+        <div class="grid_1-2">
           <div>
             <img class="Insta" src="/Images/SmaBilleder4.avif" alt="" />
             <img class="Insta" src="/Images/SmaBilleder.avif" alt="" />
@@ -119,11 +120,15 @@ import Deskfooter from "../components/Deskfooter.astro";
           </div>
         </div>
       </div>
-      <!-- <Footer /> -->
+      <Footer />
       <Deskfooter />
 
       <style>
         @media (max-width: 392px) {
+          .illu_desk {
+            display: none;
+          }
+
           body {
             background-color: rgba(255, 249, 244, 1);
             margin: 0;
@@ -188,13 +193,9 @@ import Deskfooter from "../components/Deskfooter.astro";
 
           .grid_1-2 {
             display: grid;
-            grid-template-columns: auto 2fr;
+            grid-template-columns: 1fr 2fr;
             margin: auto;
             align-items: center;
-          }
-          .grid_2-1 {
-            display: grid;
-            grid-template-columns: 2fr auto;
           }
 
           .Kontakt {
@@ -249,6 +250,10 @@ import Deskfooter from "../components/Deskfooter.astro";
             grid-template-columns: 1fr 1fr;
             padding-bottom: 30px;
             padding-top: 40px;
+          }
+
+          .illu_mobil1 {
+            display: none;
           }
 
           .container {
