@@ -1,30 +1,35 @@
 ---
-import SingleView from '../single-view.astro';
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const data = await fetch("https://vlprteqptglrilewaeps.supabase.co/rest/v1/GreenLiving", 
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZscHJ0ZXFwdGdscmlsZXdhZXBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYyMDcwOTAsImV4cCI6MjAzMTc4MzA5MH0.dhbb7ywF0JhPSlviFneY6CRDSPjtANKWEh_MWyKUgog",
-    },
-  }).then(response => response.json());
+  const data = await fetch(
+    "https://vlprteqptglrilewaeps.supabase.co/rest/v1/GreenLiving",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZscHJ0ZXFwdGdscmlsZXdhZXBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYyMDcwOTAsImV4cCI6MjAzMTc4MzA5MH0.dhbb7ywF0JhPSlviFneY6CRDSPjtANKWEh_MWyKUgog",
+      },
+    }
+  ).then((response) => response.json());
 
   return data.map((produkt) => {
     return {
       params: { slug: produkt.Slug },
-      props: { myData:produkt },
+      props: { myData: produkt },
     };
   });
 }
 
-const {myData} = Astro.props;
+const { myData } = Astro.props;
 console.log(myData);
 ---
 
-<SingleView>
+<Layout>
+  <article>
     <h1>{myData.Navn}</h1>
     <h2>{myData.Pris}</h2>
     <p>{myData.Beskrivelse}</p>
-</SingleView>
+    <img src={myData.Billede_mobil} alt="" />
+  </article>
+</Layout>

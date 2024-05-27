@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Deskmenu from "../components/Deskmenu.astro";
+import Deskfooter from "../components/Deskfooter.astro";
 ---
 
 <!doctype html>
@@ -14,12 +16,14 @@ import Footer from "../components/Footer.astro";
     <title>Forside</title>
     <link rel="stylesheet" href="https://use.typekit.net/onu0qzz.css" />
   </head>
+
+  Deskmenu
   <Header />
   <body>
     <main>
-      <div class="illu_mobil2">
+      <div class="illu_mobil1 illu_desk">
         <h1>OM GREEN LIVING OG HVAD VI STÅR FOR</h1>
-        <img src="/public/Illu_mobil.svg" alt="butik" />
+        <img src="/Illu_mobil.svg" alt="butik" />
       </div>
 
       <div class="container">
@@ -74,204 +78,233 @@ import Footer from "../components/Footer.astro";
           <li>Lørdag: 10.00-16.00</li>
           <li>Søndag: Lukket</li>
         </ul>
-        <img class="maria" src="/public/Images/Maria-Omos.avif" alt="maria" />
+        <img class="maria" src="/Images/Maria-Omos.avif" alt="maria" />
       </div>
       <div class="Instasection">
         <h3>FØLG OS PÅ INSTAGRAM</h3>
-        <div class="grid_1-2">
-          <img class="Insta" src="/public/Images/SmaBilleder1.avif" alt="" />
-          <div>
-            <img class="Insta" src="/public/Images/SmaBilleder4.avif" alt="" />
-            <img class="Insta" src="/public/Images/SmaBilleder.avif" alt="" />
-          </div>
+
+        <div class="grid_1-4">
+          <img class="Instadesk" src="/Images/deskInsta1.avif" alt="" />
+          <img class="Instadesk" src="/Images/deskInsta2.avif" alt="" />
+          <img class="Instadesk" src="/Images/deskInsta3.avif" alt="" />
+          <img class="Instadesk" src="/Images/deskInsta4.avif" alt="" />
         </div>
         <div class="grid_1-2">
+          <img class="Insta" src="/Images/SmaBilleder1.avif" alt="" />
           <div>
-            <img class="Insta" src="/public/Images/SmaBilleder4.avif" alt="" />
-            <img class="Insta" src="/public/Images/SmaBilleder.avif" alt="" />
+            <img class="Insta" src="/Images/SmaBilleder4.avif" alt="" />
+            <img class="Insta" src="/Images/SmaBilleder.avif" alt="" />
           </div>
-          <img class="Insta" src="/public/Images/SmaBilleder1.avif" alt="" />
+        </div>
+        <div class="grid_2-1">
+          <div>
+            <img class="Insta" src="/Images/SmaBilleder4.avif" alt="" />
+            <img class="Insta" src="/Images/SmaBilleder.avif" alt="" />
+          </div>
+          <img class="Insta" src="/Images/SmaBilleder1.avif" alt="" />
         </div>
         <div class="grid_1-2">
-          <img class="Insta" src="/public/Images/SmaBilleder1.avif" alt="" />
+          <img class="Insta" src="/Images/SmaBilleder1.avif" alt="" />
           <div>
-            <img class="Insta" src="/public/Images/SmaBilleder4.avif" alt="" />
-            <img class="Insta" src="/public/Images/SmaBilleder.avif" alt="" />
+            <img class="Insta" src="/Images/SmaBilleder4.avif" alt="" />
+            <img class="Insta" src="/Images/SmaBilleder.avif" alt="" />
           </div>
         </div>
       </div>
+      <!-- <Footer /> -->
+      <Deskfooter />
+
+      <style>
+        @media (max-width: 392px) {
+          body {
+            background-color: rgba(255, 249, 244, 1);
+            margin: 0;
+            padding: 0;
+          }
+
+          .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(4, 92, 69, 1);
+          }
+
+          h1 {
+            color: rgba(11, 11, 11, 1);
+            margin-bottom: 40px;
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+          }
+
+          .box {
+            background-color: rgba(239, 194, 127, 1);
+            color: rgba(240, 231, 224, 1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+          }
+
+          h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: rgba(11, 11, 11, 1);
+          }
+
+          .font2 {
+            color: rgba(240, 231, 224, 1);
+            margin-bottom: 40px;
+            font-size: 25px;
+          }
+
+          p {
+            font-size: 1em;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: rgba(11, 11, 11, 1);
+          }
+
+          button {
+            background-color: rgba(255, 156, 84, 1);
+            color: rgba(240, 231, 224, 1);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+          }
+
+          .grid_1-2 {
+            display: grid;
+            grid-template-columns: auto 2fr;
+            margin: auto;
+            align-items: center;
+          }
+          .grid_2-1 {
+            display: grid;
+            grid-template-columns: 2fr auto;
+          }
+
+          .Kontakt {
+            background-color: rgba(240, 231, 224, 1);
+            color: rgba(11, 11, 11, 1);
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+
+          .baggrundsfarve {
+            background-color: var(--primary-color);
+          }
+
+          .Insta {
+            padding: 5px;
+          }
+
+          .Instadesk {
+            display: none;
+          }
+
+          .Instasection {
+            padding-top: 30px;
+          }
+
+          .illu_mobil1 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 30px;
+            padding-top: 40px;
+          }
+
+          .maria {
+            max-width: 100%;
+            display: none;
+          }
+        }
+
+        @media (min-width: 393px) {
+          body {
+            background-color: rgba(255, 249, 244, 1);
+            margin: 0;
+            padding: 0;
+          }
+          .illu_desk {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-bottom: 30px;
+            padding-top: 40px;
+          }
+
+          .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(4, 92, 69, 1);
+          }
+
+          .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            gap: 20px;
+          }
+
+          .Kontakt {
+            background-color: rgba(240, 231, 224, 1);
+            color: rgba(11, 11, 11, 1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+
+          .maria {
+            max-width: 100%;
+          }
+
+          .box {
+            background-color: rgba(239, 194, 127, 1);
+            color: rgba(240, 231, 224, 1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+          }
+
+          button {
+            background-color: rgba(255, 156, 84, 1);
+            color: rgba(240, 231, 224, 1);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+          }
+
+          .Insta {
+            display: none;
+          }
+
+          .Instadesk {
+            max-width: 90%;
+          }
+
+          .grid_1-4 {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            justify-content: space-evenly;
+          }
+        }
+      </style>
     </main>
-    <Footer />
-
-    <style>
-      @media (max-width: 393px) {
-        body {
-          background-color: rgba(255, 249, 244, 1);
-          margin: 0;
-          padding: 0;
-        }
-
-        .container {
-          text-align: center;
-          padding: 20px;
-          background-color: rgba(4, 92, 69, 1);
-        }
-
-        h1 {
-          color: rgba(11, 11, 11, 1);
-          margin-bottom: 40px;
-        }
-
-        .content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 20px;
-        }
-
-        .box {
-          background-color: rgba(239, 194, 127, 1);
-          color: rgba(240, 231, 224, 1);
-          padding: 20px;
-          border-radius: 10px;
-          width: 80%;
-          max-width: 600px;
-        }
-
-        h2 {
-          font-size: 1.2em;
-          margin-bottom: 10px;
-          color: rgba(11, 11, 11, 1);
-        }
-
-        .font2 {
-          color: rgba(240, 231, 224, 1);
-          margin-bottom: 40px;
-          font-size: 25px;
-        }
-
-        p {
-          font-size: 1em;
-          margin-bottom: 20px;
-          line-height: 1.5;
-          color: rgba(11, 11, 11, 1);
-        }
-
-        button {
-          background-color: rgba(255, 156, 84, 1);
-          color: rgba(240, 231, 224, 1);
-          border: none;
-          padding: 10px 20px;
-          border-radius: 5px;
-          font-size: 1em;
-          transition: background-color 0.3s;
-        }
-
-        .grid_1-1 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .grid_1-2 {
-          display: grid;
-          grid-template-columns: 1fr 2fr;
-          padding: 5px;
-        }
-
-        .Kontakt {
-          background-color: rgba(240, 231, 224, 1);
-          color: rgba(11, 11, 11, 1);
-          display: flex;
-          align-items: start;
-          flex-direction: column;
-          padding-top: 20px;
-          padding-bottom: 20px;
-        }
-
-        .baggrundsfarve {
-          background-color: var(--primary-color);
-        }
-
-        .Insta {
-          padding: 5px;
-        }
-
-        .Instasection {
-          padding-top: 30px;
-        }
-
-        .illu_mobil2 {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          padding-bottom: 30px;
-          padding-top: 40px;
-        }
-        .maria {
-          max-width: 100%;
-          display: none;
-        }
-      }
-
-      @media (min-width: 393px) {
-        body {
-          background-color: rgba(255, 249, 244, 1);
-          margin: 0;
-          padding: 0;
-        }
-        .illu_mobil2 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          padding-bottom: 30px;
-          padding-top: 40px;
-        }
-
-        .container {
-          text-align: center;
-          padding: 20px;
-          background-color: rgba(4, 92, 69, 1);
-        }
-
-        .content {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-
-          gap: 20px;
-        }
-
-        .Kontakt {
-          background-color: rgba(240, 231, 224, 1);
-          color: rgba(11, 11, 11, 1);
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          padding-top: 20px;
-          padding-bottom: 20px;
-        }
-
-        .maria {
-          max-width: 100%;
-        }
-
-        .box {
-          background-color: rgba(239, 194, 127, 1);
-          color: rgba(240, 231, 224, 1);
-          padding: 20px;
-          border-radius: 10px;
-          width: 80%;
-          max-width: 600px;
-        }
-
-        button {
-          background-color: rgba(255, 156, 84, 1);
-          color: rgba(240, 231, 224, 1);
-          border: none;
-          padding: 10px 20px;
-          border-radius: 5px;
-          font-size: 1em;
-          transition: background-color 0.3s;
-        }
-      }
-    </style>
   </body>
 
 

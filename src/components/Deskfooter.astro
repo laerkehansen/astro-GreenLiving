@@ -1,0 +1,97 @@
+---
+import "../styles/global.css";
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Se mere her:</h4>
+        <ul>
+          <li>Klimaværkstedet</li>
+          <li>Trustpilot</li>
+          <li>Handelsbetingelser</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt os her:</h4>
+        <ul>
+          <li>Adresse: Nørrebrogade61, 2200</li>
+          <li>Telefon: 61765170</li>
+          <li>Email: kontakt@greenliving.dk</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Åbningstider:</h4>
+        <ul>
+          <li>Mandag-Fredag: 10.00-17.00</li>
+          <li>Lørdag: 10.00-16.00</li>
+          <li>Søndag: Lukket</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    footer {
+      background-color: rgba(4, 92, 69, 1);
+      padding: 70px 0;
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      text-transform: capitalize;
+      margin-bottom: 30px;
+      font-weight: 800;
+      position: relative;
+    }
+
+    .footer-col h4:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      text-decoration: none;
+      font-weight: 400;
+      display: block;
+      transform: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: rgba(239, 194, 127);
+      padding: 8px;
+    }
+
+    .container {
+      max-width: 1250px;
+
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+    }
+  </style>
+</footer>

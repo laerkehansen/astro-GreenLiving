@@ -1,0 +1,172 @@
+---
+
+---
+
+<nav>
+  <div class="wrapper">
+    <ul class="nav-links">
+      <a href="/"><img src="/Logo.svg" alt="" /></a>
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/produktliste">Produkter</a>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <header>Plakater</header>
+              <ul class="mega-links">
+                <li><a href="/produktliste">Rammer</a></li>
+                <li><a href="/produktliste">A3</a></li>
+                <li><a href="/produktliste">A4</a></li>
+                <li><a href="/produktliste">A5</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Keramik</header>
+              <ul class="mega-links">
+                <li><a href="/produktliste">Kopper</a></li>
+                <li><a href="/produktliste">Skåle</a></li>
+                <li><a href="/produktliste">Tallerkener</a></li>
+                <li><a href="/produktliste">Andet</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Mad/Pleje</header>
+              <ul class="mega-links">
+                <li><a href="#">Hudpleje</a></li>
+                <li><a href="#">Chokolade</a></li>
+                <li><a href="#">Nødder/Frø</a></li>
+                <li><a href="#">Tørret frugt</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Smykker</header>
+              <ul class="mega-links">
+                <li><a href="produktliste">Halskæde</a></li>
+                <li><a href="produktliste">Ringe</a></li>
+                <li><a href="produktliste">Øreringe</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Interiør</header>
+              <ul class="mega-links">
+                <li><a href="produktliste">Flettede kurve</a></li>
+                <li><a href="produktliste">Pudebetræk</a></li>
+                <li><a href="produktliste">Sengetæpper</a></li>
+                <li><a href="produktliste">Toilettasker</a></li>
+                <li><a href="produktliste">Lamper</a></li>
+                <li><a href="produktliste">Møbler</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="/omOs">Om os</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  nav {
+    background-color: rgba(240, 231, 224, 1);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    height: 65px;
+    line-height: 65px;
+  }
+
+  nav .wrapper {
+    position: fixed;
+    top: 0px;
+    max-width: 1250px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wrapper .logo a {
+    color: black;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 600;
+  }
+
+  .nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .wrapper .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links li a:hover {
+    background: rgba(239, 194, 127, 1);
+  }
+
+  .nav-links li:hover .mega-box {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+  }
+
+  .mega-box {
+    position: absolute;
+    top: 65px;
+    width: fit-content;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .mega-box .content {
+    background: rgba(240, 231, 224, 1);
+    padding: 25px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .content .row header {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .content .row .mega-links {
+    margin-left: -40px;
+  }
+
+  .content .row:nth-child(1),
+  .content .row:nth-child(2),
+  .content .row:nth-child(3),
+  .content .row:nth-child(4) {
+    border: 0px;
+  }
+
+  .row .mega-links li {
+    padding: 0 20px;
+  }
+
+  .row .mega-links li a {
+    padding: 0 20px;
+    color: black;
+    font-size: 17px;
+    display: block;
+  }
+
+  @media (min-width: 393px) {
+  }
+</style>
