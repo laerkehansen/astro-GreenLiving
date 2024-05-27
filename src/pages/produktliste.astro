@@ -19,12 +19,25 @@ const data = await fetch(
 console.log({ data });
 ---
 
-<Layout>
-  <section>
-    {
-      data.map((produkt) => {
-        return <Produktkort data={produkt} />;
-      })
-    }
-  </section>
-</Layout>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Forside</title>
+  <link rel="stylesheet" href="https://use.typekit.net/onu0qzz.css" />
+</head>
+<section>
+  {
+    data.map((produkt) => {
+      return <Produktkort data={produkt} />;
+    })
+  }
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+</style>
