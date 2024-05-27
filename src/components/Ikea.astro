@@ -1,24 +1,56 @@
 ---
 import "../styles/global.css";
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://vlprteqptglrilewaeps.supabase.co/rest/v1/GreenLiving",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZscHJ0ZXFwdGdscmlsZXdhZXBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYyMDcwOTAsImV4cCI6MjAzMTc4MzA5MH0.dhbb7ywF0JhPSlviFneY6CRDSPjtANKWEh_MWyKUgog",
+      },
+    }
+  ).then((response) => response.json());
+
+  return data.map((produkt) => {
+    return {
+      params: { slug: produkt.Slug },
+      props: { myData: produkt },
+    };
+  });
+}
+
+const { myData } = Astro.props;
+console.log(myData);
 ---
 
 <div class="farve">
   <h1>
-    <span style="color: var(--accent-color)">•</span> Inspiration til hjemmet <span style="color: var(--accent-color)">•</span>
+    <span style="color: var(--accent-color)">•</span> Inspiration til hjemmet <span
+      style="color: var(--accent-color)">•</span
+    >
   </h1>
   <a href="/produktliste"><h2>Mere inspiration</h2></a>
 </div>
 <div class="grid-1-2">
   <div>
-    <a href="/produktliste"
-      ><img src="/billeder_desk/ikeaplakat.avif" alt="" />
-    </a>
+    <article>
+      <div class="con">
+        <a href="/produktliste"> <div class="dot dot1"></div></a>
+        <a href="/produktliste"> <div class="dot dot2"></div></a>
+        <a href="/produktliste"> <div class="dot dot3"></div></a>
+        <img src="/billeder_desk/ikeaplakat.avif" />
+      </div>
+    </article>
   </div>
-  <div>
-    <a href="/produktliste"
-      ><img src="/billeder_desk/ikeaskale.avif" alt="" />
-    </a>
-  </div>
+  <article>
+    <div class="con">
+      <a href="/produktliste"> <div class="dot dot4"></div></a>
+      <a href="/produktliste"> <div class="dot dot5"></div></a>
+      <a href="/produktliste"> <div class="dot dot6"></div></a>
+      <img src="/billeder_desk/ikeaskale.avif" />
+    </div>
+  </article>
 </div>
 
 <style>
@@ -78,5 +110,72 @@ import "../styles/global.css";
 
   a {
     text-decoration-color: solid 6px black;
+  }
+
+  .con {
+    max-width: 600px;
+    position: relative;
+  }
+
+  .dot {
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 20px;
+    position: absolute;
+    width: 20px;
+    border: solid 3px;
+    border-color: rgba(255, 156, 84, 1);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .dot:hover {
+    background-color: rgba(255, 156, 84, 1);
+    color: white;
+  }
+
+  .dot1 {
+    top: 13%;
+    left: 15%;
+  }
+
+  .dot2 {
+    top: 65%;
+    right: 56%;
+  }
+
+  .dot3 {
+    bottom: 6%;
+    left: 55%;
+  }
+
+  img {
+    width: 100%;
+  }
+  article {
+    margin-top: 15px;
+    margin-left: 12px;
+  }
+
+  .dot4 {
+    top: 45%;
+    left: 25%;
+  }
+
+  .dot5 {
+    top: 55%;
+    right: 30%;
+  }
+
+  .dot6 {
+    bottom: 6%;
+    left: 55%;
+  }
+
+  img {
+    width: 100%;
+  }
+  article {
+    margin-top: 15px;
+    margin-left: 12px;
   }
 </style>
