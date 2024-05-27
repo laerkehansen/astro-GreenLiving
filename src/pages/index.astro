@@ -30,32 +30,31 @@ const data = await fetch(
   </head>
   <body>
     <Layout>
-      <img
-        class="illu_mobil"
-        src="/Illu_mobil.svg"
-        alt="illustration af butikken"
-      />
+      <img src="/billeder_desk/forside.png" alt="" />
+  
       <h1>Nyheder</h1>
-      <Ikea></Ikea>
+      <!-- <Ikea></Ikea> -->
       <div class="inspiration">
         <h3>Få inspiration her</h3>
+      
+      
         <a href="">Læs mere</a>
       </div>
-      <img src="/squrriel_mobil.svg" alt="illustration af bord med keramik" />
+      <img src="/public/billeder_desk/desk-bord.avif" alt="">
     </Layout>
 
     <style>
       .inspiration {
         display: grid;
         justify-content: end;
-        translate: -40px 100px;
+        translate: -100px 200px;
       }
 
       div a {
-        border-radius: 35%;
+        border-radius: 25px;
         color: var(--primary-color);
         background-color: rgba(255, 156, 84, 1);
-        padding: 5%;
+        padding: 8%;
         text-decoration: none;
       }
     </style>
