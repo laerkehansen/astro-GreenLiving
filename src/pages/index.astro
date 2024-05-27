@@ -35,13 +35,6 @@ const data = await fetch(
         alt="illustration af butikken"
       />
       <h1>Nyheder</h1>
-      <section>
-        {
-          data.map((produkt) => {
-            return <Produktkort data={produkt} />;
-          })
-        }
-      </section>
 
       <div class="inspiration">
         <h3>Få inspiration her</h3>
