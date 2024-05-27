@@ -1,0 +1,82 @@
+---
+import "../styles/global.css";
+---
+
+<div class="farve">
+  <h1>
+    <span style="color: var(--accent-color)">•</span> Inspiration til hjemmet <span style="color: var(--accent-color)">•</span>
+  </h1>
+  <a href="/produktliste"><h2>Mere inspiration</h2></a>
+</div>
+<div class="grid-1-2">
+  <div>
+    <a href="/produktliste"
+      ><img src="/billeder_desk/ikeaplakat.avif" alt="" />
+    </a>
+  </div>
+  <div>
+    <a href="/produktliste"
+      ><img src="/billeder_desk/ikeaskale.avif" alt="" />
+    </a>
+  </div>
+</div>
+
+<style>
+  img {
+    max-width: 100%;
+    border-radius: 30px;
+  }
+
+  @media (max-width: 393px) {
+    .grid-1-2 {
+      display: grid;
+      max-width: 100%;
+      background-color: rgba(239, 194, 127, 1);
+      padding-top: 5%;
+      padding-bottom: 5%;
+      gap: 30px;
+    }
+
+    .farve {
+      display: none;
+    }
+  }
+
+  @media (min-width: 400px) {
+    .grid-1-2 {
+      background-color: rgba(239, 194, 127, 1);
+      padding-top: 5%;
+      padding-bottom: 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5%;
+      padding: 5%;
+      padding-top: 10px;
+    }
+  }
+
+  .farve {
+    background-color: rgba(239, 194, 127, 1);
+  }
+
+  h1 {
+    font-size: 2.5vw;
+    color: rgba(11, 11, 11, 1);
+    text-align: start;
+    padding-left: 72px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 2vw;
+    color: rgba(11, 11, 11, 1);
+    text-align: start;
+    padding-left: 72px;
+    padding-bottom: 0px;
+  }
+
+  a {
+    text-decoration-color: solid 6px black;
+  }
+</style>

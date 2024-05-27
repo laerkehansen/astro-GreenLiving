@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Produktkort from "../components/Produktkort.astro";
+import Ikea from "../components/Ikea.astro";
 
 const data = await fetch(
   "https://vlprteqptglrilewaeps.supabase.co/rest/v1/GreenLiving",
@@ -35,7 +36,7 @@ const data = await fetch(
         alt="illustration af butikken"
       />
       <h1>Nyheder</h1>
-
+      <Ikea></Ikea>
       <div class="inspiration">
         <h3>Få inspiration her</h3>
         <a href="">Læs mere</a>
