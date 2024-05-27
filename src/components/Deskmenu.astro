@@ -2,83 +2,94 @@
 
 ---
 
-<div class="trustpilot">
-  <img src="/Images/Trustpilot.svg" alt="" />
-</div>
-<nav>
-  <div class="wrapper">
-    <ul class="nav-links">
-      <a href="/"><img src="/Logo.svg" alt="" /></a>
-      <li><a href="/">Home</a></li>
-      <li>
-        <a href="/produktliste">Produkter</a>
-        <div class="mega-box">
-          <div class="content">
-            <div class="row">
-              <header>Plakater</header>
-              <ul class="mega-links">
-                <li><a href="/produktliste">Rammer</a></li>
-                <li><a href="/produktliste">A3</a></li>
-                <li><a href="/produktliste">A4</a></li>
-                <li><a href="/produktliste">A5</a></li>
-              </ul>
-            </div>
-            <div class="row">
-              <header>Keramik</header>
-              <ul class="mega-links">
-                <li><a href="/produktliste">Kopper</a></li>
-                <li><a href="/produktliste">Skåle</a></li>
-                <li><a href="/produktliste">Tallerkener</a></li>
-                <li><a href="/produktliste">Andet</a></li>
-              </ul>
-            </div>
-            <div class="row">
-              <header>Mad/Pleje</header>
-              <ul class="mega-links">
-                <li><a href="#">Hudpleje</a></li>
-                <li><a href="#">Chokolade</a></li>
-                <li><a href="#">Nødder/Frø</a></li>
-                <li><a href="#">Tørret frugt</a></li>
-              </ul>
-            </div>
-            <div class="row">
-              <header>Smykker</header>
-              <ul class="mega-links">
-                <li><a href="produktliste">Halskæde</a></li>
-                <li><a href="produktliste">Ringe</a></li>
-                <li><a href="produktliste">Øreringe</a></li>
-              </ul>
-            </div>
-            <div class="row">
-              <header>Interiør</header>
-              <ul class="mega-links">
-                <li><a href="produktliste">Flettede kurve</a></li>
-                <li><a href="produktliste">Pudebetræk</a></li>
-                <li><a href="produktliste">Sengetæpper</a></li>
-                <li><a href="produktliste">Toilettasker</a></li>
-                <li><a href="produktliste">Lamper</a></li>
-                <li><a href="produktliste">Møbler</a></li>
-              </ul>
+<header>
+  <div class="trustpilot">
+    <p>Trustpilot</p><img src="/Images/Trustpilot.svg" alt="" />
+  </div>
+  <nav>
+    <div class="wrapper">
+      <div class="logo">
+        <a href="/"><img src="/Logo.svg" alt="" /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li>
+          <a href="/produktliste">Produkter</a>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <header>
+                  <span style="font-weight: bold;">Plakater</span>
+                </header>
+                <ul class="mega-links">
+                  <li><a href="/produktliste">Rammer</a></li>
+                  <li><a href="/produktliste">A3</a></li>
+                  <li><a href="/produktliste">A4</a></li>
+                  <li><a href="/produktliste">A5</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header><span style="font-weight: bold;">Keramik</span></header>
+                <ul class="mega-links">
+                  <li><a href="/produktliste">Kopper</a></li>
+                  <li><a href="/produktliste">Skåle</a></li>
+                  <li><a href="/produktliste">Tallerkener</a></li>
+                  <li><a href="/produktliste">Andet</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header>
+                  <span style="font-weight: bold;">Mad/Pleje</span>
+                </header>
+                <ul class="mega-links">
+                  <li><a href="#">Hudpleje</a></li>
+                  <li><a href="#">Chokolade</a></li>
+                  <li><a href="#">Nødder/Frø</a></li>
+                  <li><a href="#">Tørret frugt</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header><span style="font-weight: bold;">Smykker</span></header>
+                <ul class="mega-links">
+                  <li><a href="produktliste">Halskæde</a></li>
+                  <li><a href="produktliste">Ringe</a></li>
+                  <li><a href="produktliste">Øreringe</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header>
+                  <span style="font-weight: bold;">Interiør</span>
+                </header>
+                <ul class="mega-links">
+                  <li><a href="produktliste">Flettede kurve</a></li>
+                  <li><a href="produktliste">Pudebetræk</a></li>
+                  <li><a href="produktliste">Sengetæpper</a></li>
+                  <li><a href="produktliste">Toilettasker</a></li>
+                  <li><a href="produktliste">Lamper</a></li>
+                  <li><a href="produktliste">Møbler</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </li>
+        </li>
 
-      <li><a href="/omOs">Om os</a></li>
-    </ul>
-  </div>
-</nav>
+        <li><a href="/omOs">Om os</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
 <style>
   header {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-colo);
+    padding-top: 1%;
   }
   .header {
     display: grid;
   }
   nav {
     background-color: rgba(240, 231, 224, 1);
-    position: fixed;
+    /* position: fixed; */
     top: 30px;
     width: 100%;
     z-index: 999;
@@ -87,7 +98,7 @@
   }
 
   nav .wrapper {
-    position: fixed;
+    /* position: fixed; */
     top: 0px;
     max-width: 1250px;
     padding: 0 30px;
@@ -95,6 +106,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
   }
 
   .wrapper .logo a {
@@ -115,7 +127,8 @@
   .wrapper .nav-links {
     display: flex;
     gap: 20px;
-    position: fixed;
+    /* position: fixed; */
+    z-index: 999;
     top: 30px;
   }
 
@@ -135,19 +148,19 @@
 
   .mega-box {
     position: absolute;
-    top: 65px;
-    width: fit-content;
-    left: 0;
+    top: 95px;
+    width: 100%;
+    right: 0;
     opacity: 0;
     visibility: hidden;
   }
 
   .mega-box .content {
-    background: rgba(240, 231, 224, 1);
+    background: var(--primary-color);
     padding: 25px 20px;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .content .row header {
@@ -168,7 +181,7 @@
   }
 
   .row .mega-links li {
-    padding: 0 20px;
+    padding: 0 0px;
   }
 
   .content .row .mega-links li a:hover {
@@ -182,10 +195,22 @@
     display: block;
   }
 
+  .mega-links {
+    gap: 10px;
+  }
+
   .trustpilot {
     background-color: var(--secondary-color);
-    position: fixed;
-    top: 0px;
+    gap: 10px;
+    z-index: 999;
+    display: flex;
+    font-weight: bold;
+    padding-left: 5%;
+    align-items: center;
+  }
+
+  .logo {
+    align-self: start;
   }
 
   @media (min-width: 393px) {
