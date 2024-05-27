@@ -3,22 +3,29 @@ import "../styles/global.css";
 ---
 
 <footer class="footer">
+  <h3 class="overskrift">TRUSTPILOT ANMELDELSER</h3>
+  <div class="trustpilot">
+    <img src="/public/Images/Desktrustpilot.avif" alt="trustpilot" />
+    <img src="/public/Images/Desktrustpilot2.avif" alt="trustpilot" />
+    <img src="/public/Images/Desktrustpilot3.avif" alt="trustpilot" />
+  </div>
+
   <div class="container">
     <div class="row">
       <div class="footer-col">
         <h4>Se mere her:</h4>
         <ul>
-          <li>Klimaværkstedet</li>
-          <li>Trustpilot</li>
-          <li>Handelsbetingelser</li>
+          <li><a href="">Klimaværkstedet</a></li>
+          <li><a href="">Trustpilot</a></li>
+          <li><a href="">Handelsbetingelser</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Kontakt os her:</h4>
         <ul>
-          <li>Adresse: Nørrebrogade61, 2200</li>
-          <li>Telefon: 61765170</li>
-          <li>Email: kontakt@greenliving.dk</li>
+          <li><a href="">Adresse: Nørrebrogade61, 2200</a></li>
+          <li><a href="">Telefon: 61765170</a></li>
+          <li><a href="">Email: kontakt@greenliving.dk</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -33,25 +40,47 @@ import "../styles/global.css";
   </div>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding-top: 5%;
+      margin: auto;
+      background-color: var(--accent-color);
+      padding-bottom: 10%;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      margin: auto;
+      justify-items: center;
+    }
+    ul {
+      list-style: none;
+    }
     footer {
-      background-color: rgba(4, 92, 69, 1);
-      padding: 70px 0;
+      background-color: var(--header-color);
+      padding-top: 5%;
     }
 
     .footer-col {
-      width: 25%;
       padding: 0 15px;
+      display: grid;
+      justify-items: start;
     }
 
     .footer-col h4 {
       font-size: 18px;
-      text-transform: capitalize;
       margin-bottom: 30px;
       font-weight: 800;
       position: relative;
     }
 
-    .footer-col h4:before {
+    .footer-col h4::before {
       content: "";
       position: absolute;
       left: 0;
@@ -67,31 +96,34 @@ import "../styles/global.css";
 
     .footer-col ul li a {
       font-size: 16px;
-      text-transform: capitalize;
       text-decoration: none;
       font-weight: 400;
       display: block;
-      transform: all 0.3s ease;
+      color: var(--primary-color);
     }
 
     .footer-col ul li a:hover {
       color: rgba(239, 194, 127);
-      padding: 8px;
+      padding-left: 8px;
     }
 
-    .container {
-      max-width: 1250px;
-
-      margin: auto;
+    .trustpilot {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3%;
+      justify-items: center;
+      padding: 5%;
+      background-color: var(--header-color);
+    }
+    .trustpilot img {
+      border-radius: 10px;
     }
 
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    ul {
-      list-style: none;
+    .overskrift {
+      text-align: start;
+      margin-left: 6%;
+      color: var(--text-color);
+      font-size: 30px;
     }
   </style>
 </footer>
