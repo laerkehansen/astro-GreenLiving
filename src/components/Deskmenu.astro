@@ -2,6 +2,9 @@
 
 ---
 
+<div class="trustpilot">
+  <img src="/Images/Trustpilot.svg" alt="" />
+</div>
 <nav>
   <div class="wrapper">
     <ul class="nav-links">
@@ -67,10 +70,16 @@
 </nav>
 
 <style>
+  header {
+    background-color: var(--secondary-color);
+  }
+  .header {
+    display: grid;
+  }
   nav {
     background-color: rgba(240, 231, 224, 1);
     position: fixed;
-    top: 0px;
+    top: 30px;
     width: 100%;
     z-index: 999;
     height: 65px;
@@ -106,6 +115,8 @@
   .wrapper .nav-links {
     display: flex;
     gap: 20px;
+    position: fixed;
+    top: 30px;
   }
 
   .nav-links li {
@@ -169,6 +180,12 @@
     color: black;
     font-size: 17px;
     display: block;
+  }
+
+  .trustpilot {
+    background-color: var(--secondary-color);
+    position: fixed;
+    top: 0px;
   }
 
   @media (min-width: 393px) {
