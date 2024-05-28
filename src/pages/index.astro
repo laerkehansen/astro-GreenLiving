@@ -30,15 +30,18 @@ const data = await fetch(
   </head>
   <body>
     <Layout>
-      <img src="/billeder_desk/forside.png" alt="" />
+      <img class="desk" src="/billeder_desk/forside.png" alt="stole tegnet" />
       <h1>
         <span style="color: var(--button-color)">•</span> Nyheder <span
           style="color: var(--button-color)">•</span
         >
       </h1>
       <CardMobil />
+      <div class="mobil-illu">
+        <img src="/illu-forside.svg" alt="stole tegnet" />
+      </div>
       <div class="illu-forside">
-        <img src="/stole-illustration-desk.svg" alt="" />
+        <img class="desk" src="/stole-illustration-desk.svg" alt="" />
         <div class="inspiration">
           <h3>Få inspiration her</h3>
           <a href="produktliste">Læs mere</a>
@@ -51,19 +54,39 @@ const data = await fetch(
       </h2>
       <div class="container">
         <div class="billede">
-          <img src="/rund1.avif" alt="" />
+          <img class="desk" src="/rund1.avif" alt="billede af produkter" />
+          <img
+            class="Mobil"
+            src="/mobil-rund1.jpg"
+            alt="billede af produkter"
+          />
           <h3>PLAKATER</h3>
         </div>
         <div class="billede">
-          <img src="/rund2.avif" alt="" />
+          <img class="desk" src="/rund2.avif" alt="billede af produkter" />
+          <img
+            class="Mobil"
+            src="/mobil-rund2.jpg"
+            alt="billede af produkter"
+          />
           <h3>INTERIØR</h3>
         </div>
         <div class="billede">
-          <img src="/rund3.avif" alt="" />
+          <img class="desk" src="/rund3.avif" alt="billede af produkter" />
+          <img
+            class="Mobil"
+            src="/mobil-rund3.jpg"
+            alt="billede af produkter"
+          />
           <h3>KERAMIK</h3>
         </div>
         <div class="billede">
-          <img src="/rund4.avif" alt="" />
+          <img class="desk" src="/rund4.avif" alt="billede af produkter" />
+          <img
+            class="Mobil"
+            src="/mobil-rund4.jpg"
+            alt="billede af produkter"
+          />
           <h3>MAD OG PLEJE</h3>
         </div>
       </div>
@@ -71,51 +94,88 @@ const data = await fetch(
   </body>
 
   <style>
-    div a {
-      margin: auto;
-      border-radius: 25px;
-      color: var(--primary-color);
-      background-color: rgba(255, 156, 84, 1);
-      padding: 5%;
-      text-decoration: none;
-      align-self: center;
-      max-width: 30%;
-      font-weight: bold;
-      font-size: var(--p-size);
+    @media (min-width: 393px) {
+      div a {
+        margin: auto;
+        border-radius: 25px;
+        color: var(--primary-color);
+        background-color: rgba(255, 156, 84, 1);
+        padding: 5%;
+        text-decoration: none;
+        align-self: center;
+        max-width: 30%;
+        font-weight: bold;
+        font-size: var(--p-size);
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 50px;
+      }
+
+      .billede {
+        margin: 20px;
+      }
+
+      .illu-forside {
+        background-color: var(--boks-color);
+        padding: 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .inspiration {
+        display: grid;
+        justify-content: start;
+        align-content: center;
+        gap: 10px;
+        margin-left: 20%;
+      }
+      .inspiration h3 {
+        font-size: var(--h2-size);
+      }
+      h1,
+      h2 {
+        font-size: var(--h2-size);
+        margin-top: 5%;
+      }
+
+      .Mobil {
+        display: none;
+      }
+      .mobil-illu {
+        background-color: var(--boks-color);
+        padding: 5%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        display: none;
+      }
     }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 50px;
-    }
+    @media (max-width: 392px) {
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .billede {
+        margin: auto;
+        align-items: center;
+      }
 
-    .billede {
-      margin: 20px;
-    }
+      .mobil-illu {
+        background-color: var(--boks-color);
+        padding: 5%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
 
-    .illu-forside {
-      background-color: var(--boks-color);
-      padding: 5%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .inspiration {
-      display: grid;
-      justify-content: start;
-      align-content: center;
-      gap: 10px;
-      margin-left: 20%;
-    }
-    .inspiration h3 {
-      font-size: var(--h2-size);
-    }
-    h1,
-    h2 {
-      font-size: var(--h2-size);
-      margin-top: 5%;
+      .desk {
+        display: none;
+      }
     }
   </style>
 </html>

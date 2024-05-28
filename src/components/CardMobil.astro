@@ -4,31 +4,31 @@
 
 <div class="nyheder">
   <div class="kort1">
-    <a href="produktliste">
-      <img class="mobil" src="/jakker_mobil.jpg" alt="kopper på et bord" /></a
+    <a href="produktliste"
+      ><img class="Mobil" src="/jakker_mobil.jpg" alt="kopper på et bord" /></a
     >
     <img class="desk" src="/puder-desk.jpg" alt="puder på hylde" />
     <p>Nye pudebetræk</p>
   </div>
   <div class="kort1">
-    <img class="mobil" src="/kopper_mobil.jpg" alt="kopper på et bord" />
+    <img class="Mobil" src="/kopper_mobil.jpg" alt="kopper på et bord" />
     <img class="desk" src="/kopper-desk.jpg" alt="kopper på bord" />
     <p>Service i pastelfarver</p>
   </div>
   <div class="kort1">
-    <img class="mobil" src="/kopper_mobil.jpg" alt="kopper på et bord" />
+    <img class="Mobil" src="/kopper_mobil.jpg" alt="kopper på et bord" />
     <img class="desk" src="/keramik-desk.jpg" alt="keramik på bord" />
     <p>Flotte kopper</p>
   </div>
   <div class="kort1">
-    <img class="mobil" src="/kopper_mobil.jpg" alt="kopper på et bord" />
+    <img class="Mobil" src="/kopper_mobil.jpg" alt="kopper på et bord" />
     <img class="desk" src="/jakker-desk.jpg" alt="jakker i vindue" />
     <p>Sommer jakker i farver</p>
   </div>
 </div>
 
 <style>
-  @media (max-width: 393px) {
+  @media (max-width: 392px) {
     .nyheder {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -40,7 +40,6 @@
 
     .kort1 {
       background-color: var(--accent-color);
-      padding-bottom: 15%;
       border-radius: 20%;
     }
     p {
@@ -53,23 +52,24 @@
     }
   }
 
-  @media (min-width: 392px) {
+  @media (min-width: 393px) {
     .nyheder {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 50px;
-      gap: 8%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 30px;
+      justify-items: center;
+
     }
   }
-
-  .mobil {
+  .Mobil {
     display: none;
   }
 
   .kort1 {
     background-color: var(--accent-color);
     border-radius: 20px;
+    padding-bottom: 20px;
   }
   .kort1 p {
     color: var(--primary-color);
