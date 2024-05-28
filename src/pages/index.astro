@@ -31,15 +31,24 @@ const data = await fetch(
   <body>
     <Layout>
       <img src="/billeder_desk/forside.png" alt="" />
-
-      <h1>Nyheder</h1>
-      <!-- <Ikea></Ikea> -->
-      <div class="inspiration">
-        <h3>Få inspiration her</h3>
-
-        <a href="">Læs mere</a>
+      <h1>
+        <span style="color: var(--button-color)">•</span> Nyheder <span
+          style="color: var(--button-color)">•</span
+        >
+      </h1>
+      <CardMobil />
+      <div class="illu-forside">
+        <img src="/stole-illustration-desk.svg" alt="" />
+        <div class="inspiration">
+          <h3>Få inspiration her</h3>
+          <a href="produktliste">Læs mere</a>
+        </div>
       </div>
-      <img src="/billeder_desk/desk-bord.avif" alt="" />
+      <h2>
+        <span style="color: var(--button-color)">•</span> Kategorier <span
+          style="color: var(--button-color)">•</span
+        >
+      </h2>
       <div class="container">
         <div class="billede">
           <img src="/rund1.avif" alt="" />
@@ -61,29 +70,52 @@ const data = await fetch(
     </Layout>
   </body>
 
-    <style>
-.inspiration {
-  display: grid;
-  justify-content: end;
-  translate: -100px 200px;
-}
+  <style>
+    div a {
+      margin: auto;
+      border-radius: 25px;
+      color: var(--primary-color);
+      background-color: rgba(255, 156, 84, 1);
+      padding: 5%;
+      text-decoration: none;
+      align-self: center;
+      max-width: 30%;
+      font-weight: bold;
+      font-size: var(--p-size);
+    }
 
-div a {
-  border-radius: 25px;
-  color: var(--primary-color);
-  background-color: rgba(255, 156, 84, 1);
-  padding: 8%;
-  text-decoration: none;
-}
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 50px;
+    }
 
-.container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 50px;
-}
+    .billede {
+      margin: 20px;
+    }
 
-.billede {
-  margin: 20px; 
-    </style>
+    .illu-forside {
+      background-color: var(--boks-color);
+      padding: 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .inspiration {
+      display: grid;
+      justify-content: start;
+      align-content: center;
+      gap: 10px;
+      margin-left: 20%;
+    }
+    .inspiration h3 {
+      font-size: var(--h2-size);
+    }
+    h1,
+    h2 {
+      font-size: var(--h2-size);
+      margin-top: 5%;
+    }
+  </style>
 </html>
