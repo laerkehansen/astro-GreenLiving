@@ -31,32 +31,59 @@ const data = await fetch(
   <body>
     <Layout>
       <img src="/billeder_desk/forside.png" alt="" />
-  
+
       <h1>Nyheder</h1>
       <!-- <Ikea></Ikea> -->
       <div class="inspiration">
         <h3>Få inspiration her</h3>
-      
-      
+
         <a href="">Læs mere</a>
       </div>
-      <img src="/public/billeder_desk/desk-bord.avif" alt="">
+      <img src="/billeder_desk/desk-bord.avif" alt="" />
+      <div class="container">
+        <div class="billede">
+          <img src="/rund1.avif" alt="" />
+          <h3>PLAKATER</h3>
+        </div>
+        <div class="billede">
+          <img src="/rund2.avif" alt="" />
+          <h3>INTERIØR</h3>
+        </div>
+        <div class="billede">
+          <img src="/rund3.avif" alt="" />
+          <h3>KERAMIK</h3>
+        </div>
+        <div class="billede">
+          <img src="/rund4.avif" alt="" />
+          <h3>MAD OG PLEJE</h3>
+        </div>
+      </div>
     </Layout>
+  </body>
 
     <style>
-      .inspiration {
-        display: grid;
-        justify-content: end;
-        translate: -100px 200px;
-      }
+.inspiration {
+  display: grid;
+  justify-content: end;
+  translate: -100px 200px;
+}
 
-      div a {
-        border-radius: 25px;
-        color: var(--primary-color);
-        background-color: rgba(255, 156, 84, 1);
-        padding: 8%;
-        text-decoration: none;
-      }
+div a {
+  border-radius: 25px;
+  color: var(--primary-color);
+  background-color: rgba(255, 156, 84, 1);
+  padding: 8%;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.billede {
+  margin: 20px; 
     </style>
-  </body>
 </html>
