@@ -44,9 +44,9 @@ console.log(myData);
     <div class="info">
       <div class="tekst_desk">
         <h1>{myData.Navn}</h1>
-        <h2>{myData.Pris}</h2>
+        <h2>Pris {myData.Pris}</h2>
       </div>
-      <div>
+      <div class="kurv">
         <a href="">- 1 +</a>
         <a href="">Læg i kurv</a>
       </div>
@@ -68,7 +68,23 @@ console.log(myData);
       text-decoration: none;
       margin-right: 10px;
     }
+
+    h1{
+      margin-top: 20px;
+    }
+    h2{
+      margin-bottom: 10px;
+      font-weight: 100;
+    }
     @media (max-width: 393px) {
+      .info p{
+        text-align: start;
+        margin: 8%;
+        white-space: break-spaces;
+      }
+      .kurv{
+        align-self: center;
+      }
       .billede_desk {
         display: none;
       }
@@ -89,10 +105,13 @@ console.log(myData);
 
       .billede_mobil {
         align-self: center;
+        margin-bottom: 5%;
       }
 
       .info{
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
       }
       .info .valgmuligheder {
         align-self: center;
@@ -116,6 +135,8 @@ console.log(myData);
       p {
         text-align: start;
         align-items: start;
+        white-space: break-spaces;
+        margin-bottom: 5%;
       }
 
       .billede_mobil {
