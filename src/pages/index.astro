@@ -30,19 +30,23 @@ const data = await fetch(
   </head>
   <body>
     <Layout>
-      <img class="desk" src="/billeder_desk/forside.png" alt="stole tegnet" />
+      <img class="forside-billede" src="/billede-desk.jpg" alt="stole tegnet" />
       <h1>
         <span style="color: var(--button-color)">•</span> Nyheder <span
           style="color: var(--button-color)">•</span
         >
       </h1>
       <CardMobil />
-      <div class="mobil-illu">
-        <img src="/illu-forside.svg" alt="stole tegnet" />
-      </div>
       <div class="illu-forside">
+        <div class="mobil-illu">
+          <img src="/illu-forside.svg" alt="stole tegnet" />
+          <div class="inspiration">
+            <h3>Få inspiration her</h3>
+            <a href="produktliste">Læs mere</a>
+          </div>
+        </div>
         <img class="desk" src="/stole-illustration-desk.svg" alt="" />
-        <div class="inspiration">
+        <div class="inspiration-desk">
           <h3>Få inspiration her</h3>
           <a href="produktliste">Læs mere</a>
         </div>
@@ -94,18 +98,21 @@ const data = await fetch(
   </body>
 
   <style>
-    @media (min-width: 393px) {
+    @media (min-width: 449px) {
       div a {
         margin: auto;
         border-radius: 25px;
         color: var(--primary-color);
         background-color: rgba(255, 156, 84, 1);
-        padding: 5%;
+        padding: 20px;
         text-decoration: none;
         align-self: center;
-        max-width: 30%;
         font-weight: bold;
         font-size: var(--p-size);
+      }
+
+      .inspiration h3 {
+        font-size: 3vw;
       }
 
       .container {
@@ -113,10 +120,15 @@ const data = await fetch(
         justify-content: center;
         flex-wrap: wrap;
         padding: 50px;
+        gap: 40px;
       }
 
       .billede {
         margin: 20px;
+      }
+
+      .forside-billede {
+        width: 100vw;
       }
 
       .illu-forside {
@@ -126,15 +138,15 @@ const data = await fetch(
         grid-template-columns: 1fr 1fr;
       }
 
-      .inspiration {
+      .inspiration-desk {
         display: grid;
         justify-content: start;
         align-content: center;
-        gap: 10px;
+        gap: 30px;
         margin-left: 20%;
       }
-      .inspiration h3 {
-        font-size: var(--h2-size);
+      .inspiration-desk h3 {
+        font-size: 3vw;
       }
       h1,
       h2 {
@@ -153,12 +165,28 @@ const data = await fetch(
         grid-template-columns: 1fr 1fr;
         display: none;
       }
+
+      .mobil-illu a {
+        background-color: var(--boks-color);
+        padding: 5%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        display: none;
+      }
     }
 
-    @media (max-width: 392px) {
+    @media (max-width: 449px) {
+      
+      .inspiration-desk h3 {
+        font-size: 2vw;
+      }
       .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 30px;
+        margin-top: 30px;
       }
       .billede {
         margin: auto;
@@ -171,10 +199,33 @@ const data = await fetch(
         margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
       }
 
       .desk {
         display: none;
+      }
+
+      .inspiration-desk {
+        display: none;
+      }
+
+      .inspiration {
+        display: grid;
+        align-content: center;
+        gap: 15px;
+      }
+
+      div a {
+        margin: auto;
+        border-radius: 25px;
+        color: var(--primary-color);
+        background-color: rgba(255, 156, 84, 1);
+        padding: 10px;
+        text-decoration: none;
+        align-self: center;
+        font-weight: bold;
+        font-size: 3vw;
       }
     }
   </style>

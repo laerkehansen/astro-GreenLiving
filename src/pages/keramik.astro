@@ -1,6 +1,4 @@
 ---
-import "../styles/global.css";
-import CardMobil from "../components/CardMobil.astro";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -24,15 +22,6 @@ console.log({ data });
   <section>
     {
       data.map((produkt) => {
-        if (produkt.type === "plakat") {
-          return <Produktkort data={produkt} />;
-        }
-      })
-    }
-  </section>
-  <section>
-    {
-      data.map((produkt) => {
         if (produkt.type === "skaal") {
           return <Produktkort data={produkt} />;
         }
@@ -42,32 +31,20 @@ console.log({ data });
   <Ikea/>
   <section>
     {
-      data.map((produkt, index) => {
-        if (index < 8) {
+      data.map((produkt) => {
+        if (produkt.type === "kop") {
           return <Produktkort data={produkt} />;
         }
       })
     }
   </section>
- 
 </Layout>
 
 <style>
-  @media screen and (min-width: 393px) {
-    /* section {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      max-width: 70%;
-      margin: auto;
-      
-    } */
-  }
   section {
     display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* max-width: 70%; */
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin-left: 5%;
+    margin-right: 5%;
   }
 </style>
