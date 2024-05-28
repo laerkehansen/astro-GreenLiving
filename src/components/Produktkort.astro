@@ -21,12 +21,14 @@ import "../styles/global.css";
 </a>
 
 <style>
-
-
   @media (max-width: 393px) {
     .desk {
       display: none;
     }
+    /* .beskrivelse_kort {
+      display: grid;
+      gap: 1%;
+    } */
   }
 
   @media (min-width: 393px) {
@@ -34,37 +36,48 @@ import "../styles/global.css";
       display: none;
     }
     .beskrivelse {
-    display: none;
-  }
-  h1 {
-    text-align: center;
-    padding-top: 10%;
-  }
+      display: none;
+    }
+    h1 {
+      text-align: center;
+      padding-top: 10%;
+    }
 
-  h2,
-  h3,
-  a {
-    text-align: start;
-  }
+    h2,
+    h3,
+    a {
+      text-align: start;
+    }
 
-  .billede_kort {
-    align-self: center;
-  }
-  .kort_til_produkt {
-    background-color: var(--header-color);
-    margin: 30px;
-    padding: 10%;
-    display: grid;
-    justify-content: center;
-    gap: 5%;
-  }
+    h2,
+    h3 {
+      font-size: small;
+    }
 
-  .beskrivelse_kort {
-    display: grid;
-    gap: 5%
-  }
-  main {
-    display: grid;
-  }
+    .billede_kort {
+      align-self: center;
+    }
+    .kort_til_produkt {
+      background-color: var(--header-color);
+      margin: 30px;
+      padding: 10%;
+      display: grid;
+      justify-content: center;
+      gap: 5%;
+    }
+
+    .beskrivelse_kort {
+      display: grid;
+      gap: 5%;
+    }
+    main {
+      display: grid;
+    }
+    .kort_til_produkt img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
   }
 </style>

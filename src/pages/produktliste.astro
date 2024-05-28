@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Produktkort from "../components/Produktkort.astro";
+import Ikea from "../components/Ikea.astro";
 
 const data = await fetch(
   "https://vlprteqptglrilewaeps.supabase.co/rest/v1/GreenLiving",
@@ -23,20 +24,59 @@ console.log({ data });
   <section>
     {
       data.map((produkt) => {
-        return <Produktkort data={produkt} />;
+        if (produkt.type === "plakat") {
+          return <Produktkort data={produkt} />;
+        }
+      })
+    }
+  </section>
+  <section>
+    {
+      data.map((produkt) => {
+        if (produkt.type === "skaal") {
+          return <Produktkort data={produkt} />;
+        }
+      })
+    }
+  </section>
+  
+  <section>
+    {
+      data.map((produkt, index) => {
+        if (index < 8) {
+          return <Produktkort data={produkt} />;
+        }
+      })
+    }
+  </section>
+  <Ikea />
+  <section>
+    {
+      data.map((produkt, index) => {
+        if (index >= 8) {
+          return <Produktkort data={produkt} />;
+        }
       })
     }
   </section>
 </Layout>
 
 <style>
-
-  @media (min-width:393px){
-    section {
+  @media screen and (min-width: 393px) {
+    /* section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 70%;
+      margin: auto;
+      
+    } */
+  }
+  section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 50%;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* max-width: 70%; */
+    margin: auto;
   }
-  }
- 
-</style> 
+</style>
