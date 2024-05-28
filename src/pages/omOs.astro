@@ -16,8 +16,8 @@ import Deskfooter from "../components/Deskfooter.astro";
     <title>Forside</title>
     <link rel="stylesheet" href="https://use.typekit.net/onu0qzz.css" />
   </head>
-  <Header />
   <body>
+    <Header />
     <main>
       <div class="illu_mobil1 illu_desk grid1-1">
         <h1>
@@ -29,7 +29,11 @@ import Deskfooter from "../components/Deskfooter.astro";
       </div>
 
       <div class="container">
-        <h2 class="font2"><span style="color: var(--button-color)">•</span> VORES VÆRDIER <span style="color: var(--button-color)">•</span></h2>
+        <h2 class="font2">
+          <span style="color: var(--button-color)">•</span> VORES VÆRDIER <span
+            style="color: var(--button-color)">•</span
+          >
+        </h2>
         <div class="content">
           <div class="box">
             <h2>Hvorfor vælge bæredygtighed tænker I?</h2>
@@ -88,7 +92,10 @@ import Deskfooter from "../components/Deskfooter.astro";
         <img class="maria" src="/Images/Maria-Omos.avif" alt="maria" />
       </div>
       <div class="Instasection">
-        <h3><span style="color: var(--button-color);">•</span> FØLG OS PÅ INSTAGRAM <span style="color: var(--button-color);">•</span></h3>
+        <h3>
+          <span style="color: var(--button-color);">•</span> FØLG OS PÅ INSTAGRAM
+          <span style="color: var(--button-color);">•</span>
+        </h3>
 
         <div class="grid_1-4">
           <img class="Instadesk" src="/Images/deskInsta1.avif" alt="" />
@@ -235,6 +242,10 @@ import Deskfooter from "../components/Deskfooter.astro";
             border-radius: 10px;
             display: none;
           }
+
+          li {
+            color: var(--text-color);
+          }
         }
 
         @media (min-width: 393px) {
@@ -265,7 +276,7 @@ import Deskfooter from "../components/Deskfooter.astro";
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 5%;
-            margin:auto;
+            margin: auto;
           }
 
           .Kontakt {
@@ -298,6 +309,7 @@ import Deskfooter from "../components/Deskfooter.astro";
             padding: 10%;
             display: grid;
             gap: 10px;
+            align-items: center;
           }
 
           .box p {
@@ -373,10 +385,12 @@ import Deskfooter from "../components/Deskfooter.astro";
           h1 {
             font-size: 4vw;
           }
+
+          li {
+            color: var(--text-color);
+          }
         }
       </style>
     </main>
   </body>
-
-
 </html>

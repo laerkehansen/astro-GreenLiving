@@ -19,13 +19,17 @@
 h1,
 h2,
 h3,
-h4,
 p,
-a,
-li {
+a {
   font-family: montserrat;
   text-align: center;
   color: var(--text-color);
+}
+
+h4,
+li {
+  font-family: montserrat;
+  color: var(--primary-color);
 }
 
 ul li {
