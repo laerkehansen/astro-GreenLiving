@@ -3,19 +3,33 @@
 ---
 
 <div class="trustpilot">
-  <img src="/Images/Trustpilot.svg" alt="" />
+  <div class="trust">
+    <a href="https://dk.trustpilot.com/review/www.green-living.dk"
+      ><p>Trustpilot</p></a
+    >
+    <img src="/Images/Trustpilot.svg" alt="" />
+  </div>
+  <div class="icons">
+    <a href="https://www.instagram.com/green_living_by_me/"
+      ><img src="/insta.svg" alt="instagram ikon" /></a
+    >
+    <a href="https://www.facebook.com/Greenlivingbyme"
+      ><img src="/fb.svg" alt="facebook ikon" /></a
+    >
+  </div>
 </div>
 <nav>
   <div class="wrapper">
+    <a href="/"><img src="/Logo.svg" alt="groent trae" /></a>
+
     <ul class="nav-links">
-      <a href="/"><img src="/Logo.svg" alt="" /></a>
       <li><a href="/">Home</a></li>
       <li>
         <a href="/produktliste">Produkter</a>
         <div class="mega-box">
           <div class="content">
             <div class="row">
-              <header>Plakater</header>
+              <p><span style="font-weight: bold;">Plakater</span></p>
               <ul class="mega-links">
                 <li><a href="/produktliste">Rammer</a></li>
                 <li><a href="/produktliste">A3</a></li>
@@ -24,7 +38,7 @@
               </ul>
             </div>
             <div class="row">
-              <header>Keramik</header>
+              <p><span style="font-weight: bold;">Keramik</span></p>
               <ul class="mega-links">
                 <li><a href="/produktliste">Kopper</a></li>
                 <li><a href="/produktliste">Skåle</a></li>
@@ -33,7 +47,7 @@
               </ul>
             </div>
             <div class="row">
-              <header>Mad/Pleje</header>
+              <p><span style="font-weight: bold;">Mad/Pleje</span></p>
               <ul class="mega-links">
                 <li><a href="#">Hudpleje</a></li>
                 <li><a href="#">Chokolade</a></li>
@@ -42,7 +56,7 @@
               </ul>
             </div>
             <div class="row">
-              <header>Smykker</header>
+              <p><span style="font-weight: bold;">Smykker</span></p>
               <ul class="mega-links">
                 <li><a href="produktliste">Halskæde</a></li>
                 <li><a href="produktliste">Ringe</a></li>
@@ -50,7 +64,7 @@
               </ul>
             </div>
             <div class="row">
-              <header>Interiør</header>
+              <p><span style="font-weight: bold;">Interiør</span></p>
               <ul class="mega-links">
                 <li><a href="produktliste">Flettede kurve</a></li>
                 <li><a href="produktliste">Pudebetræk</a></li>
@@ -78,8 +92,6 @@
   }
   nav {
     background-color: rgba(240, 231, 224, 1);
-    position: fixed;
-    top: 30px;
     width: 100%;
     z-index: 999;
     height: 65px;
@@ -87,13 +99,10 @@
   }
 
   nav .wrapper {
-    position: fixed;
-    top: 0px;
     max-width: 1250px;
     padding: 0 30px;
     margin: auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
   }
 
@@ -108,15 +117,13 @@
     color: black;
     text-decoration: none;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
   }
 
   .wrapper .nav-links {
     display: flex;
-    gap: 20px;
-    position: fixed;
-    top: 30px;
+    gap: 40px;
   }
 
   .nav-links li {
@@ -135,11 +142,13 @@
 
   .mega-box {
     position: absolute;
-    top: 65px;
-    width: fit-content;
+    top: 120px;
+    width: 100%;
     left: 0;
     opacity: 0;
     visibility: hidden;
+    z-index: 999;
+    background-color: var(--primary-color);
   }
 
   .mega-box .content {
@@ -147,7 +156,7 @@
     padding: 25px 20px;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .content .row header {
@@ -158,6 +167,10 @@
 
   .content .row .mega-links {
     margin-left: -40px;
+  }
+
+  .row p {
+    font-size: var(--p-size);
   }
 
   .content .row:nth-child(1),
@@ -184,8 +197,30 @@
 
   .trustpilot {
     background-color: var(--secondary-color);
-    position: fixed;
-    top: 0px;
+    display: flex;
+    font-weight: bold;
+    font-size: var(--p-size);
+    gap: 20px;
+    margin-left: 2%;
+    padding: 1%;
+    justify-content: space-between;
+  }
+
+  .trustpilot a {
+    text-decoration: none;
+    color: var(--text-color);
+    gap: 20px;
+  }
+
+  .trust {
+    display: flex;
+    gap: 10px;
+  }
+
+  .icons {
+    display: flex;
+    gap: 20px;
+    padding-right: 30px;
   }
 
   @media (min-width: 393px) {

@@ -21,7 +21,19 @@ import "../styles/global.css";
 </a>
 
 <style>
-  .beskrivelse {
+
+
+  @media (max-width: 393px) {
+    .desk {
+      display: none;
+    }
+  }
+
+  @media (min-width: 393px) {
+    .mobil {
+      display: none;
+    }
+    .beskrivelse {
     display: none;
   }
   h1 {
@@ -49,21 +61,10 @@ import "../styles/global.css";
 
   .beskrivelse_kort {
     display: grid;
+    gap: 5%
   }
-
   main {
     display: grid;
   }
-
-  @media (max-width: 393px) {
-    .desk {
-      display: none;
-    }
-  }
-
-  @media (min-width: 393px) {
-    .mobil {
-      display: none;
-    }
   }
 </style>
