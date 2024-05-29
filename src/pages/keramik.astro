@@ -1,6 +1,4 @@
 ---
-import "../styles/global.css";
-import CardMobil from "../components/CardMobil.astro";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -21,19 +19,6 @@ console.log({ data });
 ---
 
 <Layout>
-  <h1><span style="color: var(--button-color)">•</span> Produkter <span style="color: var(--button-color)">•</span></h1>
-  <h2><span style="color: var(--accent-color)">•</span> Plakater <span style="color: var(--accent-color)">•</span></h2>
-  <section>
-    {
-      data.map((produkt) => {
-        if (produkt.type === "plakat") {
-          return <Produktkort data={produkt} />;
-        }
-      })
-    }
-  </section>
-  <Ikea />
-  <h2><span style="color: var(--accent-color)">•</span> Skåle <span style="color: var(--accent-color)">•</span></h2>
   <section>
     {
       data.map((produkt) => {
@@ -43,16 +28,16 @@ console.log({ data });
       })
     }
   </section>
-
-  <!-- <section>
+  <Ikea/>
+  <section>
     {
-      data.map((produkt, index) => {
-        if (index < 8) {
+      data.map((produkt) => {
+        if (produkt.type === "kop") {
           return <Produktkort data={produkt} />;
         }
       })
     }
-  </section> -->
+  </section>
 </Layout>
 
 <style>
@@ -60,38 +45,5 @@ console.log({ data });
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin: auto;
-    }
-  @media (min-width: 500px) {
-   h1{
-    font-size: 4vw;
-    margin-top: 8%;
-   }
-
-   h2{
-    font-size: 3vw;
-    margin-top: 5%;
-    margin-left: 6%;
-    text-align: start;
-   }
-   
   }
-
-  @media (max-width:500px){
-    h1{
-    font-size: 10vw;
-    margin-top: 8%;
-   }
-
-   h2{
-    font-size: 8vw;
-    margin-top: 5%;
-    margin-left: 6%;
-    text-align: start;
-   }
-  }
-
 </style>
-
-
- 
-

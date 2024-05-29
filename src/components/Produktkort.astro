@@ -13,22 +13,45 @@ import "../styles/global.css";
       </div>
       <div class="beskrivelse_kort">
         <h2>{data.Navn}</h2>
-        <h3>{data.Pris}</h3>
+        <h3>Pris {data.Pris}</h3>
         <p class="beskrivelse">{data.Beskrivelse}</p>
+        <a href="produktliste"
+          ><span style="text-decoration: underline;">Læs mere</span></a
+        >
       </div>
     </div>
   </div>
 </a>
 
 <style>
+  a {
+    text-decoration: none;
+  }
+  h3 {
+    font-weight: 100;
+  }
+  h2,
+  h3,
+  a {
+    text-align: start;
+  }
+
   @media (max-width: 393px) {
     .desk {
       display: none;
     }
-    /* .beskrivelse_kort {
+    .beskrivelse {
+      display: none;
+    }
+
+    .kort_til_produkt {
+      background-color: var(--header-color);
+      margin: 3%;
+      padding: 10%;
       display: grid;
-      gap: 1%;
-    } */
+      justify-content: center;
+      gap: 5%;
+    }
   }
 
   @media (min-width: 393px) {
@@ -41,12 +64,6 @@ import "../styles/global.css";
     h1 {
       text-align: center;
       padding-top: 10%;
-    }
-
-    h2,
-    h3,
-    a {
-      text-align: start;
     }
 
     h2,

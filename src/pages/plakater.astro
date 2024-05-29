@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Produktkort from "../components/Produktkort.astro";
+import Ikea from "../components/Ikea.astro";
+
+const data = await fetch(
+  "https://vlprteqptglrilewaeps.supabase.co/rest/v1/GreenLiving",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZscHJ0ZXFwdGdscmlsZXdhZXBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYyMDcwOTAsImV4cCI6MjAzMTc4MzA5MH0.dhbb7ywF0JhPSlviFneY6CRDSPjtANKWEh_MWyKUgog",
+    },
+  }
+).then((res) => res.json());
+console.log({ data });
+---
+
+<Layout>
+  <section>
+    {
+      data.map((produkt) => {
+        if (produkt.type === "plakat") {
+          return <Produktkort data={produkt} />;
+        }
+      })
+    }
+  </section>
+</Layout>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: auto;
+  }
+</style>

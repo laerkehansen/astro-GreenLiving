@@ -47,8 +47,39 @@ import "../styles/global.css";
       .footer {
         display: none;
       }
+
+      .overskrift {
+      text-align: start;
+      margin-left: 6%;
+      color: var(--text-color);
+      font-size: 3vw;
     }
 
+    .footer-col h4 {
+      font-size: 3vw;
+      margin-bottom: 30px;
+      font-weight: 800;
+      position: relative;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+      font-weight: 400;
+      display: block;
+      color: var(--primary-color);
+      font-size: 2vw;
+    }
+
+    .overskrift {
+      text-align: start;
+      margin-left: 6%;
+      color: var(--text-color);
+      font-size: 3vw;
+    }
+    
+  }
+
+    @media(min-width:393px){
     * {
       margin: 0;
       padding: 0;
@@ -71,6 +102,9 @@ import "../styles/global.css";
     ul {
       list-style: none;
     }
+    .footer-col ul li{
+      font-size: 1vw;
+    }
     footer {
       background-color: var(--header-color);
       padding-top: 5%;
@@ -83,7 +117,7 @@ import "../styles/global.css";
     }
 
     .footer-col h4 {
-      font-size: 18px;
+      font-size: 2vw;
       margin-bottom: 30px;
       font-weight: 800;
       position: relative;
@@ -104,11 +138,11 @@ import "../styles/global.css";
     }
 
     .footer-col ul li a {
-      font-size: 16px;
       text-decoration: none;
       font-weight: 400;
       display: block;
       color: var(--primary-color);
+      font-size: 1vw;
     }
 
     .footer-col ul li a:hover {
@@ -132,7 +166,8 @@ import "../styles/global.css";
       text-align: start;
       margin-left: 6%;
       color: var(--text-color);
-      font-size: 30px;
+      font-size: 2vw;
     }
+  }
   </style>
 </footer>
