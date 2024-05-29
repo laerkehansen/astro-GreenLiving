@@ -36,7 +36,8 @@ console.log(myData);
   <div>
     <article>
       <div class="con">
-        <a href="/produktliste"> <div class="dot dot1"></div></a>
+        <a href="/produktliste"> <div class="dot dot1">
+          <img class="hoverbillede" src="plakat1_desk.avif" alt=""></div></a>
         <a href="/produktliste"> <div class="dot dot2"></div></a>
         <a href="/produktliste"> <div class="dot dot3"></div></a>
         <img src="/billeder_desk/ikeaplakat.avif" />
@@ -132,6 +133,15 @@ console.log(myData);
   .dot:hover {
     background-color: rgba(255, 156, 84, 1);
     color: white;
+  }
+
+  a:hover .hoverbillede{
+    display: block;
+    position: absolute;
+  }
+
+  .hoverbillede{
+    display: none;
   }
 
   .dot1 {
