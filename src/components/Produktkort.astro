@@ -4,8 +4,8 @@ console.log(data);
 import "../styles/global.css";
 ---
 
-<a href={"produkter/" + data.Slug}>
-  <div class="kort_til_produkt">
+<div class="kort_til_produkt">
+  <a href={"produkter/" + data.Slug}>
     <div>
       <div class="billede_kort">
         <img class="mobil" src={data.Billede_mobil} alt="billede af produkt" />
@@ -15,13 +15,13 @@ import "../styles/global.css";
         <h2>{data.Navn}</h2>
         <h3>Pris {data.Pris}</h3>
         <p class="beskrivelse">{data.Beskrivelse}</p>
-        <a href="produktliste"
-          ><span style="text-decoration: underline;">Læs mere</span></a
-        >
+        <a href="produktliste">
+          <span style="text-decoration: underline;">Læs mere</span>
+        </a>
       </div>
     </div>
-  </div>
-</a>
+  </a>
+</div>
 
 <style>
   a {
